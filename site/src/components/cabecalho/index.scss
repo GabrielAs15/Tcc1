@@ -1,0 +1,106 @@
+.cabecalho-page {
+    
+    
+    margin: 50px -183px;
+    margin-top: -109px;
+    display: flex;
+    flex-direction: row;    
+    justify-content: space-between;
+    padding: 0px 80px;
+    background-color: #44BBE1;
+    width: 111.75%;
+    padding-bottom: 10px;
+    
+    .menu{
+        width: 3em;
+        margin: 1em;
+        margin-left: 3em;
+    }
+
+    .faq, .carrinho{
+        width: 2em;
+        height: 2em;
+        margin-top: 20px;
+    }
+
+    .t1, .t2{
+        margin-top: 2em ;
+    }
+
+    .t1{
+        font-size: 20px;
+        
+    }
+    .logo{
+        width: 10em;
+        height: 4em;
+        margin-top: .8em;
+    }
+
+    .menu{
+        margin-top: .8em;
+    }
+
+    
+    .menu-page{
+        background-color: #8D8A8A;
+        margin: 0em -10px;
+        padding: 2em 1em;
+        position:absolute;
+        height: 100%;
+        line-height: 2em;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        
+    }
+
+    .buttons{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .b1, .b2 {
+        margin-top: 1em; 
+        border: transparent;
+    }
+
+
+    .menu-content{
+        margin-top: -10em;
+        
+    }
+
+    .t3{
+        margin-bottom: 7em;
+        
+        margin-left: -.8em;
+        margin-right: -1em;
+        text-align: center;
+        margin-top: 1em;
+
+    }
+
+    .lines{
+        margin-top: 4em;
+        line-height:inherit;
+    }
+
+    .line1, .line2, .line3, .line4{
+        padding: 10px;
+    }
+
+    .b1 {
+        background-color: #000000;
+        color: #ffffff;
+        border-radius: 100000px;
+        padding: 5px;
+        width:50%;
+    }
+
+    .b2{
+        background-color: #8D8A8A;
+        color: #ffffff;
+    }
+}

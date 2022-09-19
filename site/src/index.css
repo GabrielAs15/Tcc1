@@ -1,15 +1,12 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+main {
+  padding: 3em;
+  padding-top: 1em;
 }
 
 textarea {
@@ -22,5 +19,21 @@ button{
 
 textarea{
   box-shadow: 1px 1px 1px gray;
-
+  
 }
+
+* {
+  box-sizing:unset;
+  margin: 0px;
+}
+
+input, select {
+  outline: none;
+  border: 1px solid rgb(92, 92, 92);
+  user-select: none;
+
+  border-radius: 5px;
+  font-size: 1em;
+  padding: .5em;
+}
+
