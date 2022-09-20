@@ -14,7 +14,7 @@ const [menu, setMenu] = useState(false);
             <div>
             <img src="./images/menu.png" className="menu" onClick={MostrarMenu} />
             </div>
-            
+                 
             {menu === true &&
                 <div className='menu-page'>
                     
@@ -42,6 +42,8 @@ const [menu, setMenu] = useState(false);
             <div className='t2'> Entrar </div>        
             <img src="./images/image 16.png" alt="faq" className='faq'/>
             <img src="./images/image 15.png" alt="carrinho" className='carrinho'/> 
+            
         </header>
+        
     );
 }
