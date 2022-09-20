@@ -9,7 +9,7 @@ export default function Index(){
                 <input type="text" placeholder='E-mail' className='Email'/>
                 <input type='password'  placeholder='•••••' className='senha'/>
                 <div className='Botão'>
-                    <img src='./images/foto1.png'/>
+                    <img src='./images/praentrar.png'/>
                     <a> ENTRAR </a>
                 </div>
             </div>
