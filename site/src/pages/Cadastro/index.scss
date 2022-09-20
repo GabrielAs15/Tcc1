@@ -1,11 +1,9 @@
 .Page-Cadastro{
     
     
-    @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&family=Quintessential&display=swap');
-        
-    
+    @import url('https://fonts.googleapis.com/css2?family=Aldrich&display=swap');    
 
-    padding: 17.5vh;
+    padding: 11.1vh;
     background-color: #f0f0f0;
     
     .container {
@@ -16,13 +14,9 @@
     }
 
   
-   
-
     .content {
         display: flex;
-        align-items: flex-start;
         width: 100%;
-        flex-grow: 1;
         justify-content: space-around;
     }
 
@@ -34,7 +28,6 @@
         width: 14em;
         padding: 1.5em;
         margin: 1em;
-        display: flex;
         align-items: center;
         border-radius: 10px;
     }
@@ -82,7 +75,9 @@
         margin-right: 7.5em;
         padding: .6em .1em;
         border-radius: 5px;
-        font-family: 'Barlow Condensed';
+        font-family: 'Aldrich';
+        font-size: 20px;
     }
+
     
 }

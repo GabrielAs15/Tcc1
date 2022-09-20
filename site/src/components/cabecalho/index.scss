@@ -13,23 +13,26 @@
     
     .menu{
         width: 3em;
-        margin: 1em;
+        margin-top: 1.5em;
         margin-left: 3em;
     }
 
     .faq, .carrinho{
         width: 2em;
         height: 2em;
-        margin-top: 20px;
-    }
-
-    .t1, .t2{
-        margin-top: 2em ;
+        margin-top: 25px;
     }
 
     .t1{
         font-size: 20px;
+        font-family: 'Alata';
+        margin-top: 1.5em;
         
+    }
+
+    .t2 {
+        font-family: 'Aldrich';
+        margin-top: 2em;
     }
     .logo{
         width: 10em;
@@ -37,10 +40,7 @@
         margin-top: .8em;
     }
 
-    .menu{
-        margin-top: .8em;
-    }
-
+   
     
     .menu-page{
         background-color: #8D8A8A;
