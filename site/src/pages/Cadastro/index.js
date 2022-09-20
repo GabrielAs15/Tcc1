@@ -1,13 +1,14 @@
 import './index.scss';
 import Cabecalho from '../../components/cabecalho/index.js'
+import { useState } from 'react';
 
 export default function Index() {
     return (
         <main className="Page-Cadastro">
              <Cabecalho className="cabecalho" />
 
-            <div className='container'>
-                    <div className="content">
+            <div className='container' >
+                    <div className="content" >
                         <div className="Save"> 
                             <input type="file" placeholder='Salvar Imagem' id='file' />
                             <img src="./images/image 30.png" className="f1" />

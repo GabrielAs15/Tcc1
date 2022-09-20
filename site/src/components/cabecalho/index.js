@@ -9,8 +9,12 @@ const [menu, setMenu] = useState(false);
         setMenu(true)
     }
 
+    function TirarMenu(){
+        setMenu(false)
+    }
+
     return(
-        <header className="cabecalho-page">
+        <header className="cabecalho-page" >
             <div>
             <img src="./images/menu.png" className="menu" onClick={MostrarMenu} />
             </div>
@@ -20,6 +24,9 @@ const [menu, setMenu] = useState(false);
                     
                     <div className='menu-content'>
                          <p className='t3'> MENU </p>  
+
+                         <div className='exit'> <img src='/images/x.png'onClick={TirarMenu} className="x"/> </div>
+
                         <div className='lines'>
                             <div className='line1'>
                                 <img src='' />
