@@ -1,0 +1,14 @@
+/post           /api/login/usuario
+
+request
+{
+    "email":"",
+    "senha":""
+}
+
+response 
+{
+    "id": 0,
+    "email": "",
+    "nome": ""
+}
