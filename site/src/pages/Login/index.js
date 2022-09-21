@@ -1,7 +1,16 @@
 import { Link } from 'react-router-dom';
 import './index.scss';
+import axios from 'axios';
+import { useState } from 'react';
 
 export default function Index(){
+    const [email, setEmail] = useState('');
+    const [senha, setSenha] = useState('');
+    const [erro, setErro] = useState('');
+
+    async function entrarClick(){
+        
+    }
     return(
         <div className='Page-Login'>
             <h1 className='Login'> LOGIN </h1>
