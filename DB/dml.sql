@@ -3,15 +3,13 @@
   Values (?,?,?,?,?)
 
 
- 
- select id_usuario               id
-   from    tb_login_usuario    
-    join   tb_usuario
-      on   tb_login_usuario.id_usuario = tb_usuario.id_usuario
-where   ds_email = 'techexpressadmin@gmail.com'
-    and   ds_senha = '1234'
+-- carga inicial usuário admin
+INSERT INTO  tb_login_usuario ( DS_EMAIL, DS_SENHA)
+     VALUES ('techexpress@admin.com.br', '1234');
 
-
-
---inserir valores do login
-insert intor 
+--efetuar login
+select ID_USUARIO 		id,
+       DS_EMAIL			email
+  from  tb_login_usuario
+ where DS_EMAIL 		= 'techexpress@admin.com.br'
+   and DS_SENHA			= '1234';
