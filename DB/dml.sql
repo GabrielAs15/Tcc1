@@ -4,13 +4,14 @@
 
 
  
- select id_usuario               id,
-        nm_usuario             nome
- from   tb_login_usuario    
-  join  tb_usuario
-    on  tb_login_usuario.id_usuario = tb_usuario.id_usuario
- where  ds_email =  'admin@gmail.com'
-   and  ds_senha =  '1234'
+ select id_usuario               id
+   from    tb_login_usuario    
+    join   tb_usuario
+      on   tb_login_usuario.id_usuario = tb_usuario.id_usuario
+where   ds_email = 'techexpressadmin@'
+    and   ds_senha = '123456789'
 
 
---produto
+
+--inserir valores do login
+insert intor 
