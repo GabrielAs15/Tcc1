@@ -8,8 +8,8 @@
    from    tb_login_usuario    
     join   tb_usuario
       on   tb_login_usuario.id_usuario = tb_usuario.id_usuario
-where   ds_email = 'techexpressadmin@'
-    and   ds_senha = '123456789'
+where   ds_email = 'techexpressadmin@gmail.com'
+    and   ds_senha = '1234'
 
 
 
