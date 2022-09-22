@@ -1,9 +1,16 @@
-import { Link, useNavigate } from 'react-router-dom';
-import './index.scss';
-import { login } from '../../api/loginAPI';
+// React
 import LoadingBar from 'react-top-loading-bar';
+
+// React scss
+import './index.scss';
+
+// Hooks
+import { Link, useNavigate } from 'react-router-dom';
 import { useState, useEffect, useRef  } from 'react';   
 import storage from 'local-storage'
+
+// Api
+import { login } from '../../api/loginAPI';
 
 export default function Index(){
 
@@ -28,17 +35,17 @@ export default function Index(){
 
         try {
             const r = await login(email, senha);
-            storage('usuario-logado', r)
-            setTimeout(() => {
-                navigate('/cadastro');
-            }, 3000)
-
+            if(r){
+                storage('usuario-logado', r)
+                setTimeout(() => {
+                    navigate('/cadastro');
+                }, 3000)
+            }
         }
         catch (err){
            // ref.current.complete();
             setCarregando(false);
             if(err.response.status === 401){
-                
                 setErro(err.response.data.erro);
             }
         }
@@ -53,7 +60,7 @@ export default function Index(){
                 <input type='password'  placeholder='•••••' className='senha' value={senha} onChange={e => setSenha(e.target.value)}/>
                 <div className='Botão'>
                     <img src='./images/image 23 (1).png'/>
-                    <Link to="/cadastro" onClick={entrarClick} disable={Carregando}> ENTRAR </Link>
+                    <div onClick={entrarClick} disable={Carregando}> ENTRAR </div>
                 </div>
             </div>
             <p> Não tem uma conta? </p>
