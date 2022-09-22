@@ -1,25 +1,59 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './index.scss';
-import axios from 'axios';
-import { useState } from 'react';
+import { login } from '../../api/loginAPI';
+import LoadingBar from 'react-top-loading-bar';
+import { useState, useEffect, useRef  } from 'react';   
+import storage from 'local-storage'
 
 export default function Index(){
-    const [email, setEmail] = useState('');
+
+    useEffect(() => {
+        if(storage('usuario-logado')){
+            navigate('/cadastro');
+        }
+    }, [])
+
+    const [email, setEmail] = useState(''); 
     const [senha, setSenha] = useState('');
     const [erro, setErro] = useState('');
+    const [Carregando, setCarregando] = useState(false);
 
-    async function entrarClick(){
-        
+    const navigate = useNavigate();
+    // const refe = useRef(null);
+
+
+    async function entrarClick() {
+        // ref.current.continuousStart();
+        setCarregando(true);
+
+        try {
+            const r = await login(email, senha);
+            storage('usuario-logado', r)
+            setTimeout(() => {
+                navigate('/cadastro');
+            }, 3000)
+
+        }
+        catch (err){
+           // ref.current.complete();
+            setCarregando(false);
+            if(err.response.status === 401){
+                
+                setErro(err.response.data.erro);
+            }
+        }
     }
+
     return(
         <div className='Page-Login'>
+               
             <h1 className='Login'> LOGIN </h1>
             <div className='input'>
-                <input type="text" placeholder='E-mail' className='Email'/>
-                <input type='password'  placeholder='•••••' className='senha'/>
+                <input type="text" placeholder='E-mail' className='Email' value={email} onChange={e => setEmail(e.target.value)}/>
+                <input type='password'  placeholder='•••••' className='senha' value={senha} onChange={e => setSenha(e.target.value)}/>
                 <div className='Botão'>
-                    <img src='./images/praentrar.png'/>
-                    <a> ENTRAR </a>
+                    <img src='./images/image 23 (1).png'/>
+                    <Link to="/cadastro" onClick={entrarClick} disable={Carregando}> ENTRAR </Link>
                 </div>
             </div>
             <p> Não tem uma conta? </p>
