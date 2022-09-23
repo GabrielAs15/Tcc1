@@ -15,5 +15,6 @@ select ID_USUARIO 		id,
    and DS_SENHA			= '1234';
 
 select * from tb_login_admin;
+
 INSERT INTO  tb_login_admin( DS_EMAIL, DS_SENHA)
      VALUES ('techexpress@admin.com.br', '1234');

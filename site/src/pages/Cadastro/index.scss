@@ -24,21 +24,31 @@
         display: flex;
         flex-direction: column;
         color: #838383;
-       background-color: #ffffff;
+        background-color: #ffffff;
         width: 14em;
-        padding: 1.5em;
+        padding: 1em;
         margin: 1em;
         align-items: center;
         border-radius: 10px;
+        height: 13em;
+
     }
 
-    #file{
+    .f2{
+        width: 12em;
+        border-radius: 10px;
+
+    }
+
+    #file {
     visibility: hidden;
     position: absolute;
+    
     }
 
     .f1{
-            width: 10em;
+            width: 12em;
+
         }
     
     .inputs{
@@ -48,7 +58,7 @@
         
     }
 
-    input, select {
+    .campo {
         margin-bottom: 2em;
         padding: 1em ;
         width: 20em;
