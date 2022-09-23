@@ -1,6 +1,6 @@
  --inserir produto
-  Insert into tb_produto (nm_produto, vl_preco, qtd_desconto, qtd_estoque, ds_descricao)
-  Values (?,?,?,?,?)
+  Insert into tb_produto (ID_DEPARTAMENTO, ID_MARCA, NM_PRODUTO, VL_PRODUTO, VL_DESCONTO, QTD_ESTOQUE, DS_PRODUTO)
+  Values (?,?,?,?,?);
 
 
 -- carga inicial usuário admin
