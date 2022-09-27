@@ -4,7 +4,7 @@ const api = axios.create({
 })
 
 export async function listarMarcas() {
-    const r = await api.get('/api/categoria');
+    const r = await api.get('/api/marcas');
     return r.data;
 }
 

@@ -41,6 +41,9 @@ export default function Index(){
                     navigate('/cadastro');
                 }, 3000)
             }
+            else {
+                alert("Credenciais inválidas!")
+            }
         }
         catch (err){
            // ref.current.complete();

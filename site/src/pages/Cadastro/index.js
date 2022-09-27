@@ -35,10 +35,9 @@ export default function Index() {
                 throw new Error("Insira uma imagem!");
             }
             const precoProduto = Number(valor.replace(',', '.'));
-            const usuario = Storage('usuario-loagado').id
 
-            const  novoProduto = await cadastroProduto(nome, precoProduto, desconto, estoque, descricao, idDepartamento);
-             await enviarImagemProduto(novoProduto.id, imagem  )
+            const  novoProduto = await cadastroProduto(nome, precoProduto, desconto, estoque, descricao, idDepartamento, idMarca);
+            const r =  await enviarImagemProduto(novoProduto.id, imagem  )
            
             alert('🚀 Produto cadastrado com sucesso! ');
         } catch(err) {
@@ -49,7 +48,6 @@ export default function Index() {
             else{
                 alert(err.message)
             }
-
     }
     
     }

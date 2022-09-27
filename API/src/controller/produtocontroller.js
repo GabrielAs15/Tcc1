@@ -1,7 +1,7 @@
 import {inserirProduto, mudarImagem} from '../repository/produtorepository.js'
 
-import {multer} from 'multer'
-import {router} from 'express'
+import multer from 'multer'
+import { Router } from 'express'
 
 const server = Router();
 const upload = multer({ dest: 'storage/imgProduto' })
@@ -14,17 +14,19 @@ server.post('/cadastrarProduto', async (req, resp)=>{
             throw new Error('Departamento obrigatorio');
         if (!novoProduto.marca)
             throw new Error('Marca obrigatoria');
-        if (!novoProduto.Nome)
+        if (!novoProduto.nome)
             throw new Error('Nome obrigatorio');
         if (!novoProduto.valor)
             throw new Error('Valor obrigatorio');
         if (!novoProduto.desconto)
             throw new Error('Desconto obrigatorio');
-        if (!novoProduto.quantidade)
-            throw new Error('Quantidade obrigatorio');
+        if (!novoProduto.estoque)
+            throw new Error('Estoque obrigatorio');
         if (!novoProduto.descricao)
             throw new Error('Descrição obrigatoria');
 
+    
+    
         const produto = await inserirProduto(novoProduto);
         resp.send(produto);
     } catch(err){
