@@ -10,7 +10,7 @@ server.post('/cadastrarProduto', async (req, resp)=>{
     try{
         const novoProduto = req.body;
 
-        if (!novoProduto.departamento)
+        if (!novoProduto.idDepartamento)
             throw new Error('Departamento obrigatorio');
         if (!novoProduto.marca)
             throw new Error('Marca obrigatoria');

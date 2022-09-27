@@ -15,13 +15,13 @@ import Cabecalho from '../../components/cabecalho/index.js'
 
 export default function Index() {
     const [nome, setNome] = useState("");
-    const [valor, setValor] = useState(0);
+    const [valor, setValor] = useState("");
     const [desconto, setDesconto] = useState(0);
     const [estoque, setEstoque] = useState(0);
     const [descricao, setDescricao] = useState("");
-    const [imagem, setImagem] = useState('');
+    const [imagem, setImagem] = useState();
     
-    const [idMarca, setIdMarca] = useState();
+    const [marca, setMarca] = useState();
     const [marcas, setMarcas] = useState([]);
 
     const [idDepartamento, setIdDepartamento] = useState();
@@ -34,23 +34,16 @@ export default function Index() {
             if(!imagem){
                 throw new Error("Insira uma imagem!");
             }
-            const precoProduto = Number(valor.replace(',', '.'));
 
-            const  novoProduto = await cadastroProduto(nome, precoProduto, desconto, estoque, descricao, idDepartamento, idMarca);
+            const  novoProduto = await cadastroProduto(idDepartamento, marca, nome, valor, desconto, estoque, descricao);
             const r =  await enviarImagemProduto(novoProduto.id, imagem  )
            
             alert('🚀 Produto cadastrado com sucesso! ');
         } catch(err) {
-
-            if(err.response){
             alert(err.response.data.erro);
-            }
-            else{
-                alert(err.message)
-            }
-    }
+        }
     
-    }
+    }       
     
 
     async function carregarDepartamentos() {
@@ -131,7 +124,7 @@ export default function Index() {
                             </div>
                             <div>
                                     <label>Marca:</label> <br/><br/>
-                                    <select className='campo'value={idMarca} onChange={e => setIdMarca(e.target.value)}>
+                                    <select className='campo'value={marca} onChange={e => setMarca(e.target.value)}>
                                         <option selected disabled hidden>Selecione</option>
                                         {marcas.map(item =>
                                             <option value={item.id}> {item.marca} </option>
@@ -143,7 +136,7 @@ export default function Index() {
                        
                     </div>
             </div>
-                <textarea placeholder="Descrição do Produto" />
+                <textarea placeholder="Descrição do Produto" value={descricao} onChange={e => setDescricao(e.target.value)} />
                 <button className='button-register' onClick={salvarClick}> Cadastrar </button>
         </main>
     );

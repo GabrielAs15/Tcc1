@@ -1,10 +1,19 @@
 import axios from 'axios';
-const api= axios.create({
+
+const api = axios.create({
     baseURL: 'http://localhost:5000'
 })
 
 export async function cadastroProduto(idDepartamento, marca, nome, valor, desconto, estoque, descricao){
-    const r = await api.post('/cadastro', {idDepartamento, marca, nome, valor, desconto, estoque, descricao });
+    const r = await api.post('/cadastrarProduto', {
+        idDepartamento: idDepartamento,
+        marca: marca,
+        nome: nome,
+        valor: valor,
+        desconto: desconto,
+        estoque: estoque,
+        descricao: descricao
+    });
     return r.data;
 }
 

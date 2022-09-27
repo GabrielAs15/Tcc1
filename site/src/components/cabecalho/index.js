@@ -1,9 +1,15 @@
 import { useState } from 'react';
 import './index.scss';
-
+import { Navigate } from 'react-router-dom';
+import storage from 'local-storage'
 export default function Index(){
 const [menu, setMenu] = useState(false);
 
+
+        async function sairClick(){
+            storage.remove('usuario-logado');
+            Navigate('/Login')
+        }
 
     function MostrarMenu(){
         setMenu(true)
@@ -39,7 +45,7 @@ const [menu, setMenu] = useState(false);
                     </div>
                     <div className='buttons'>
                         <button className='b1'> Login </button>
-                        <button className='b2'> Sair </button>
+                        <button className='b2'onClick={sairClick}> Sair </button>
                     </div>
                 </div>
                 
