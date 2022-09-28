@@ -10,7 +10,7 @@ export default function AppRoutes() {
     return(
         <BrowserRouter>
             <Routes>
-                <Route path="/CadastroCliente" element={<CadastroCliente />} />
+                <Route path="/CadastroC" element={<CadastroCliente />} />
                 <Route path="/Login" element={<Login />} />
                 <Route path="/Cadastro" element={<Cadastro />} />
             </Routes>

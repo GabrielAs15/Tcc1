@@ -11,7 +11,7 @@ import { listarDepartamentos } from '../../api/departamentoAPI';
 import { enviarImagemProduto } from '../../api/cadastroAPI';
 
 //Componente
-import Cabecalho from '../../components/cabecalho/index.js'
+import Cabecalho from '../../components/cabecalhoADM/index.js'
 
 export default function Index() {
     const [nome, setNome] = useState("");
