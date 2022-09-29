@@ -1,14 +1,25 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './index.scss';
-import { Navigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import storage from 'local-storage'
+
+
 export default function Index(){
+
 const [menu, setMenu] = useState(false);
 
+const navigate = useNavigate();
+
+
+    useEffect(() => {
+        if(!storage('usuario-logado')){
+            navigate('/Login')
+        }
+    }, []) 
 
         async function sairClick(){
             storage.remove('usuario-logado');
-            Navigate('/Login')
+            navigate('/Login')
         }
 
     function MostrarMenu(){

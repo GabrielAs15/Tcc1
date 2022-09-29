@@ -14,11 +14,7 @@ import { login } from '../../api/loginAPI';
 
 export default function Index(){
 
-    useEffect(() => {
-        if(storage('usuario-logado')){
-            navigate('/cadastro');
-        }
-    }, [])
+  
 
     const [email, setEmail] = useState(''); 
     const [senha, setSenha] = useState('');
