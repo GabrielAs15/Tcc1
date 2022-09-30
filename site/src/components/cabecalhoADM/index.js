@@ -15,6 +15,9 @@ export default function Index() {
         if (!storage('usuario-logado')) {
             navigate('/Login')
         }
+        else if (storage('usuario-logado')){
+            navigate('/cadastro')
+        }
     }, [])
 
     async function sairClick() {
