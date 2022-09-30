@@ -2,11 +2,12 @@
 // React scss
 import './cadastroUsuario.scss';
 
-
+    
 export default function cadastroUsuario (){
     return(
         <main className="cont01">
             <div className='cont02'>
+                
                 <h1 className='titulo'>Cadastro</h1>
 
                 <div className="cont03">

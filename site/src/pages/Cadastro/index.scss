@@ -3,14 +3,15 @@
     
     @import url('https://fonts.googleapis.com/css2?family=Aldrich&display=swap');    
 
-    padding: 11.1vh;
+    min-height: 93vh;
     background-color: #f0f0f0;
-    
+
     .container {
     display: flex;
     flex-direction: row;
     flex-grow: 1;
-    
+    padding-top: 7em;
+
     }
 
   
@@ -89,5 +90,8 @@
         font-size: 20px;
     }
 
-    
+    input{
+        box-shadow: 1px 1px 1px gray;
+        
+    }
 }

@@ -1,16 +1,22 @@
 .cabecalho-page {
-    
-    
+    //margem 
     margin: 50px -183px;
-    margin-top: -109px;
+    margin-top: -20px;
+
+    //flex-box
     display: flex;
     flex-direction: row;    
     justify-content: space-between;
+
+    //espaçamento
     padding: 0px 80px;
-    background-color: #44BBE1;
     width: 111.75%;
+
     position: fixed;
     padding-bottom: 10px;
+    
+    
+    background-color: #44BBE1;
     .menu{
         width: 3em;
         margin-top: 1.5em;
