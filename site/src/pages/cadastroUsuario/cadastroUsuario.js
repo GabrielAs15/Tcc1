@@ -1,7 +1,7 @@
 
 // React scss
 import './cadastroUsuario.scss';
-
+import {Link} from 'react-router-dom'
     
 export default function cadastroUsuario (){
     return(
@@ -23,7 +23,13 @@ export default function cadastroUsuario (){
                         <input type="text" placeholder='CPF'></input>    
                     </div>
                 </div>
-                    <button className="botao-cadastro">Cadastrar</button>
+                    <button className="botao-cadastro">
+                        <img src="../../public/images/image 14.png"></img>    
+                            Cadastrar
+                    </button>
+                    <div>
+                        <Link to='../login'>sexo</Link>
+                    </div>
             </div>
         </main>
     )
