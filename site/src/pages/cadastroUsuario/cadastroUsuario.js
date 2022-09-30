@@ -2,6 +2,8 @@
 // React scss
 import './cadastroUsuario.scss';
 import {Link} from 'react-router-dom'
+
+import img14 from "../../images/image14.png";
     
 export default function cadastroUsuario (){
     return(
@@ -24,11 +26,12 @@ export default function cadastroUsuario (){
                     </div>
                 </div>
                     <button className="botao-cadastro">
-                        <img src="../../public/images/image 14.png"></img>    
+                    <img src={img14}/>   
                             Cadastrar
                     </button>
                     <div>
-                        <Link to='../login'>sexo</Link>
+                    <p> Não tem uma conta? </p>
+                        <Link to='../login'>Cadastre-se!</Link>
                     </div>
             </div>
         </main>
