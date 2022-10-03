@@ -1,0 +1,33 @@
+.P{
+
+
+    .box-produto{
+        border: 1px solid;
+        width: min-content;
+        padding: 1vh;
+
+    }
+
+    .box-desconto{
+        background-color: red;
+        border-radius: 5px;
+        width: min-content;
+        color:white;
+        padding: 5px;
+        font-family: 'aldrich';
+    }
+
+    .info-produto{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nome-produto{
+        font-family: 'poppins';
+    }
+
+    .preco{
+        font-family: 'alata';
+    }
+}
