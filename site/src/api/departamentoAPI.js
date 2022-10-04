@@ -8,3 +8,4 @@ export async function listarDepartamentos() {
     const r = await api.get('/api/departamento');
     return r.data;
 }
+        

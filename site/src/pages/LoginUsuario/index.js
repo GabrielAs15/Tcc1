@@ -10,7 +10,7 @@ import { useState, useEffect, useRef  } from 'react';
 import storage from 'local-storage'
 
 // Api
-import { login } from '../../api/loginAPI';
+import { loginUsuario } from '../../api/loginusuarioAPI';
 
 
 export default function Index(){
@@ -31,18 +31,14 @@ export default function Index(){
         setCarregando(true);
 
         try {
-            const r = await login(email, senha);
-            if(email === 'techexpress@admin.com.br', r){
-                storage('admin-logado', r)
-                navigate('/Cadastro');
-                
-                
-            }
-            else if(email != 'techexpress@admin.com.br'){
+            const r = await loginUsuario    (email, senha);
+            if(r){
+                storage('usuario-logado', r)
                 setTimeout(() => {
                     navigate('/BuscarProduto');
                 }, 3000)
             }
+           
             else {
                 alert("Credenciais inválidas!")
             }
