@@ -2,10 +2,12 @@
     background: linear-gradient(to bottom,#44BBE1, #365A9E);
 
     padding: 42.8vh;
-
+    font-family: 'Alata';
     .Login {
         text-align: center;
         font-size: 48px;
+        margin-top: -3em;
+        margin-bottom: 1em;
     }
 
     .input {
@@ -39,13 +41,29 @@
     }
 
     .Botão{
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 10px;
         border: transparent;
         padding: 0.8em;
         border-radius: 15px ;
         background-color: #fff;
     }
+    
+    .entrar{
+        margin-left: 10px;
+        margin-top: 4px;
+    }
 
     a {
         padding-bottom: 10em;
+    }
+
+    .link{
+        text-align: center;
+    }
+
+    .cadastre{
+        
     }
 }

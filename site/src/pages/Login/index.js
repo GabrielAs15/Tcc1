@@ -35,8 +35,11 @@ export default function Index(){
             if(r){
                 storage('usuario-logado', r)
                 setTimeout(() => {
-                    navigate('/cadastro');
+                    navigate('/');
                 }, 3000)
+                if( email === 'techexpress@admin.com.br'){
+                    navigate('/cadastro')
+                }
             }
             else {
                 alert("Credenciais inválidas!")
@@ -60,12 +63,14 @@ export default function Index(){
                 <input type="text" placeholder='E-mail' className='Email' value={email} onChange={e => setEmail(e.target.value)}/>
                 <input type='password'  placeholder='•••••' className='senha' value={senha} onChange={e => setSenha(e.target.value)}/>
                 <div className='Botão'>
-                    <img src='./images/image 23 (1).png'/>
-                    <div onClick={entrarClick} disable={Carregando}> ENTRAR </div>
+                    <img src='./images/f1.png'/>
+                    <div onClick={entrarClick} disable={Carregando} className="entrar"> ENTRAR </div>
                 </div>
             </div>
-            <p> Não tem uma conta? </p>
-            <p> Cadastre-se!</p>
+            <div className='link'>
+                <p> Não tem uma conta? </p>
+                <Link to="/cadastro" className='cadastre'> Cadastre-se! </Link>
+            </div>
         </div>
     );
 }
