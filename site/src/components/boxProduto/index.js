@@ -9,7 +9,7 @@ export default function consultar(){
             </div>
 
             <div className='img-produto'>
-                <img src="../images/placaGTX 33.png"/>
+                <img src="../images/placaGTX 38.png"/>
             </div>
 
             <div className='info-produto'>
