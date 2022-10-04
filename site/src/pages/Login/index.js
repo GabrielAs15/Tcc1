@@ -32,14 +32,16 @@ export default function Index(){
 
         try {
             const r = await login(email, senha);
-            if(r){
+            if(email === 'techexpress@admin.com.br', r){
                 storage('usuario-logado', r)
+                navigate('/Cadastro');
+                
+                
+            }
+            else if(email != 'techexpress@admin.com.br'){
                 setTimeout(() => {
-                    navigate('/');
+                    navigate('/BuscarProduto');
                 }, 3000)
-                if( email === 'techexpress@admin.com.br'){
-                    navigate('/cadastro')
-                }
             }
             else {
                 alert("Credenciais inválidas!")
@@ -69,7 +71,7 @@ export default function Index(){
             </div>
             <div className='link'>
                 <p> Não tem uma conta? </p>
-                <Link to="/cadastro" className='cadastre'> Cadastre-se! </Link>
+                <Link to="/CadastroCliente" className='cadastre'> Cadastre-se! </Link>
             </div>
         </div>
     );

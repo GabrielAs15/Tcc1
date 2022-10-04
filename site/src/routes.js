@@ -12,11 +12,11 @@ export default function AppRoutes() {
     return(
         <BrowserRouter>
             <Routes>
-                <Route path="/Cadastro" element={<CadastroCliente />} />
+                <Route path="/CadastroCliente" element={<CadastroCliente />} />
                 <Route path="/Login" element={<Login />} />
-                <Route path="/CadastroProduto" element={<Cadastro />} />
+                <Route path="/Cadastro" element={<Cadastro />} />
                 <Route path='/BuscarProduto' element={<BuscarProduto />} />
             </Routes>
         </BrowserRouter>
-    );
+    );  
 }
