@@ -1,37 +1,51 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './index.scss';
-import { Navigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import storage from 'local-storage'
-export default function Index(){
-const [menu, setMenu] = useState(false);
 
 
-        async function sairClick(){
-            storage.remove('usuario-logado');
-            Navigate('/Login')
+export default function Index() {
+
+    const [menu, setMenu] = useState(false);
+
+    const navigate = useNavigate();
+
+
+    useEffect(() => {
+        if (!storage('usuario-logado')) {
+            navigate('/Login')
         }
+        else if (storage('usuario-logado')){
+            navigate('/cadastro')
+        }
+    }, [])
 
-    function MostrarMenu(){
+    async function sairClick() {
+        storage.remove('usuario-logado');
+        navigate('/Login')
+    }
+
+    function MostrarMenu() {
         setMenu(true)
     }
 
-    function TirarMenu(){
+    function TirarMenu() {
         setMenu(false)
     }
 
-    return(
+    return (
         <header className="cabecalho-page" >
             <div>
-            <img src="./images/menu.png" className="menu" onClick={MostrarMenu} />
+                <img src="./images/menu.png" className="menu" onClick={MostrarMenu} />
             </div>
-                 
+
             {menu === true &&
                 <div className='menu-page'>
-                    
-                    <div className='menu-content'>
-                         <p className='t3'> MENU </p>  
 
-                         <div className='exit'> <img src='/images/x.png'onClick={TirarMenu} className="x"/> </div>
+                    <div className='menu-content'>
+                        <p className='t3'> MENU </p>
+
+                        <div className='exit'> <img src='/images/x.png' onClick={TirarMenu} className="x" /> </div>
 
                         <div className='lines'>
                             <div className='line1'>
@@ -45,18 +59,18 @@ const [menu, setMenu] = useState(false);
                     </div>
                     <div className='buttons'>
                         <button className='b1'> Login </button>
-                        <button className='b2'onClick={sairClick}> Sair </button>
+                        <button className='b2' onClick={sairClick}> Sair </button>
                     </div>
                 </div>
-                
+
             }
-            <img src="./images/logoT 3.png" className='logo'/>
-            <div className='t1'> ADMINISTRADOR </div>    
-            <div className='t2'> Entrar </div>        
-            <img src="./images/image 16.png" alt="faq" className='faq'/>
-            <img src="./images/image 15.png" alt="carrinho" className='carrinho'/> 
-            
+            <img src="./images/logoT 3.png" className='logo' />
+            <div className='t1'> ADMINISTRADOR </div>
+            <div className='t2'> Entrar </div>
+            <img src="./images/image 16.png" alt="faq" className='faq' />
+            <img src="./images/image 15.png" alt="carrinho" className='carrinho' />
+
         </header>
-        
+
     );
 }

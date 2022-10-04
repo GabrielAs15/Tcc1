@@ -12,13 +12,10 @@ import storage from 'local-storage'
 // Api
 import { login } from '../../api/loginAPI';
 
+
 export default function Index(){
 
-    useEffect(() => {
-        if(storage('usuario-logado')){
-            navigate('/cadastro');
-        }
-    }, [])
+  
 
     const [email, setEmail] = useState(''); 
     const [senha, setSenha] = useState('');
@@ -56,7 +53,8 @@ export default function Index(){
 
     return(
         <div className='Page-Login'>
-               
+
+
             <h1 className='Login'> LOGIN </h1>
             <div className='input'>
                 <input type="text" placeholder='E-mail' className='Email' value={email} onChange={e => setEmail(e.target.value)}/>
