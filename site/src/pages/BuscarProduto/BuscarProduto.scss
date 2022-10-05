@@ -1,0 +1,33 @@
+.page-total{
+    background: rgb(240, 240, 240);
+
+    display: flex;
+    flex-direction: column;
+    min-height: 93vh;
+    align-items: center;
+
+    font-family: 'Alata';
+    .busque{
+        border-style:solid;
+        border-color:red;
+        border-radius: 10px;
+        width: 400px;
+        height: 34px;
+    }
+
+    .botao-alterar{
+        display: flex;
+        padding: 0.8em;
+        max-width: 300px;
+        border-radius: 10px;
+        background-color: #676767;
+    }
+
+    .txt{
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        text-align: center  ;
+    }
+    
+    
+}

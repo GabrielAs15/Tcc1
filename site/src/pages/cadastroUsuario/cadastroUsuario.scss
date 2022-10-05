@@ -9,8 +9,6 @@
     }
 
     .cont02{
-        border-style:solid ;
-        border-color: rebeccapurple;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -20,8 +18,6 @@
     }
     
     .cont03{
-        border-style:solid ;
-        border-color: red;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -31,16 +27,13 @@
     }
     
     .sub-cont01{
-        border-style:solid ;
-        border-color: blue;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         width:45%;
-        height: 17em;
-
- 
-    }    
+        height: 17em; 
+    }   
+     
     input{
         border-radius: 10px;
         width: 400px;

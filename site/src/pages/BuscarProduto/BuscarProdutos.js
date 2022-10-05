@@ -1,5 +1,9 @@
+// React scss
+import './BuscarProduto.scss';
+
 //componentes
 import Produto from '../../components/boxProduto/index.js'
+import Cabecalho from '../../components/cabecalhoADM/index.js'
 
 // Hooks
 import { Link } from 'react-router-dom';
@@ -9,10 +13,18 @@ export default function BuscarProduto(){
     return(
         <main className="page-total">
             <div>
-                <h1>Consultar Produtos</h1>
-                <input type="text" placeholder='Busque aqui' className='Busque' />
+                <div className='titulo'>
+                    <h1>Consultar Produtos</h1>
+                </div>
+                
+
+                    <input type="text" className='busque' placeholder='Busque aqui' />
+
                 <Produto />
-                <Link to="/Cadastro"> Editar informações </Link>
+
+                <div className='botao-alterar'>
+                    <Link className='txt' to="/Cadastro" > Alterar informações </Link>
+                </div>
             </div>
         </main>
     )
