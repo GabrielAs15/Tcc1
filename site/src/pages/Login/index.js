@@ -34,15 +34,12 @@ export default function Index(){
             const r = await login(email, senha);
             if(email === 'techexpress@admin.com.br', r){
                 storage('admin-logado', r)
-                navigate('/Cadastro');
-                
-                
-            }
-            else if(email != 'techexpress@admin.com.br'){
                 setTimeout(() => {
-                    navigate('/BuscarProduto');
+                    navigate('/Cadastro');
                 }, 3000)
+                
             }
+            
             else {
                 alert("Credenciais inválidas!")
             }

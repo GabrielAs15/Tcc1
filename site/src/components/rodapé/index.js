@@ -1,3 +1,5 @@
+//
+
 export default function Index(){
     return(
         <div>
@@ -22,20 +24,22 @@ export default function Index(){
             </div>
             <div className="coluna4">
                 <div> Contato </div>
-                <div> </div>
-                <div></div>
-                <div></div>
-                <div></div>
+                <div> Tel: </div>
+                <div> (11)94058-4464 </div>
+                <div> Email: </div>
+                <div> Contato@TechExpress.com </div>
             </div>
             <div className="parcerias">
-                <img />
-                <img />
+                <div> Disponível para:</div>
+                <img src="./images/playstorelogo.png"/>
+                <img src="./images/appstorelogo.png"/>
             </div>
             <div className="contatos">
-                <img />
-                <img />
-                <img />
-                <img />
+                <div> Redes Sociais </div>
+                <img src="./images/twitterlogo.png"/>
+                <img src="./images/whatslogo.png"/>
+                <img src="./images/instalogo.png"/>
+                <img src="./images/linkedinlogo.png"/>
             </div>
         </div>
     )
