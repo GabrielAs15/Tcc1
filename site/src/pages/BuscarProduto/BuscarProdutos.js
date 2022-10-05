@@ -12,7 +12,7 @@ export default function BuscarProduto(){
                 <h1>Consultar Produtos</h1>
                 <input type="text" placeholder='Busque aqui' className='Busque' />
                 <Produto />
-                <Link to="/Cadastro"> Cadastre-se! </Link>
+                <Link to="/Cadastro"> Editar informações </Link>
             </div>
         </main>
     )
