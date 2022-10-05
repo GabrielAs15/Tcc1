@@ -138,7 +138,10 @@ export default function Index() {
                     </div>
             </div>
                 <textarea placeholder="Descrição do Produto" value={descricao} onChange={e => setDescricao(e.target.value)} />
+                <div className='button'>
                 <button className='button-register' onClick={salvarClick}> Cadastrar </button>
+                </div>
+            <Rodapé />
         </main>
     );
 }
