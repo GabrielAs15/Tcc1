@@ -39,8 +39,7 @@ export default function Index(){
                 }, 3000)
                 
             }
-            
-            else {
+                        else {
                 alert("Credenciais inválidas!")
             }
         }

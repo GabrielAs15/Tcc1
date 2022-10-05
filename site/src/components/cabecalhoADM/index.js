@@ -12,16 +12,16 @@ export default function Index() {
 
 
     useEffect(() => {
-        if (!storage('usuario-logado')) {
+        if (!storage('admin-logado')) {
             navigate('/Login')
         }
-        else if (storage('usuario-logado')){
+        else if (storage('admin-logado')){
             navigate('/cadastro')
         }
     }, [])
 
     async function sairClick() {
-        storage.remove('usuario-logado');
+        storage.remove('admin-logado');
         navigate('/Login')
     }
 

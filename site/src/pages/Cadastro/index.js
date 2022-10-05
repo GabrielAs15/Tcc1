@@ -12,6 +12,7 @@ import { enviarImagemProduto } from '../../api/cadastroAPI';
 
 //Componente
 import Cabecalho from '../../components/cabecalhoADM/index.js'
+import Rodapé from '../../components/rodapé/index.js';
 
 export default function Index() {
     const [nome, setNome] = useState("");
