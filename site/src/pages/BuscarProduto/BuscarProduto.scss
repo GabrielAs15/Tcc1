@@ -3,21 +3,33 @@
 
     display: flex;
     flex-direction: column;
-    min-height: 93vh;
+    min-height: 90vh;
     align-items: center;
 
     font-family: 'Alata';
+    .titulo{
+        padding-top: 5%;
+        padding-left:17% ;
+        padding-bottom: 8%;
+    }
     .busque{
-        border-style:solid;
-        border-color:red;
+        
         border-radius: 10px;
-        width: 400px;
+        width: 430px;
         height: 34px;
+        border-color:white;
     }
 
+    .produto{
+        padding-top: 6%;
+        padding-left: 20%;
+    }
+
+    
     .botao-alterar{
         display: flex;
-        padding: 0.8em;
+        padding: 3%;
+        margin-left: 12%;
         max-width: 300px;
         border-radius: 10px;
         background-color: #676767;
@@ -26,7 +38,7 @@
     .txt{
         color: rgb(255, 255, 255);
         text-decoration: none;
-        text-align: center  ;
+        padding-left: 25%;
     }
     
     

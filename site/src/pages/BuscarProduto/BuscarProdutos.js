@@ -20,7 +20,9 @@ export default function BuscarProduto(){
 
                     <input type="text" className='busque' placeholder='Busque aqui' />
 
+                <div className='produto'>
                 <Produto />
+                </div>
 
                 <div className='botao-alterar'>
                     <Link className='txt' to="/Cadastro" > Alterar informações </Link>
