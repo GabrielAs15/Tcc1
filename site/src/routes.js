@@ -17,6 +17,7 @@ export default function AppRoutes() {
                 <Route path="/CadastroCliente" element={<CadastroCliente />} />
                 <Route path="/Login" element={<Login />} />
                 <Route path="/Cadastro" element={<Cadastro />} />
+                <Route path="/produto/:idParam" element={<Cadastro />} />
                 <Route path='/BuscarProduto' element={<BuscarProduto />} />
                 <Route path='/LoginUsuario' element={<LoginUsuario />} />
             </Routes>

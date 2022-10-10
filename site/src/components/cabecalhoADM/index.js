@@ -16,7 +16,7 @@ export default function Index() {
             navigate('/Login')
         }
         else if (storage('admin-logado')){
-            navigate('/cadastro')
+            navigate('')
         }
     }, [])
 

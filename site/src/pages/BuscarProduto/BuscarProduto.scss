@@ -15,6 +15,8 @@
     .busque{
         
         border-radius: 10px;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
         width: 430px;
         height: 34px;
         border-color:white;
@@ -41,5 +43,60 @@
         padding-left: 25%;
     }
     
+    .lupa{
+        width: 1.5em;
+        height: 3.3em;
+        background-color: #fff;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    .search{
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+    }
+    table{
+        margin-top: 3em;
+    }
+    th {
+        background-color: #676767;
+        color: #fff;
+        padding: 10px 15px;
+        text-align: left;
+    }
     
+    td {
+        padding: 10px 15px;
+    }
+
+    tr:nth-child(odd) td {
+        background-color: #fff;
+    }
+    tr:nth-child(even) td {
+        background-color: #f1f1f1;
+    }
+
+    
+    tr td:nth-last-child(1), tr td:nth-last-child(2) {
+        padding: 0px;
+        text-align: center;
+    }
+    tr td:nth-last-child(1) span, tr td:nth-last-child(2) span {
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 10px;
+        cursor: pointer;
+        transition: .6s;
+        padding: 5px 10px;
+        border-radius: 3px;
+    }
+    tr td:nth-last-child(1) span:hover, tr td:nth-last-child(2) span:hover {
+        background-color: #000;
+        color: #fff;
+    }
+
+    .editar{
+        width: 2em; 
+    }
 }

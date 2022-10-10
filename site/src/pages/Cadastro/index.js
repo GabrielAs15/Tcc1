@@ -3,9 +3,9 @@ import './index.scss';
 
 // Hooks
 import { useState, useEffect } from 'react';
-
+import { useNavigate, useParams } from 'react-router-dom';
 // API
-import { cadastroProduto } from '../../api/cadastroAPI';
+import { alterarProduto, cadastroProduto } from '../../api/cadastroAPI';
 import { listarMarcas } from '../../api/marcaAPI';
 import { listarDepartamentos } from '../../api/departamentoAPI';
 import { enviarImagemProduto } from '../../api/cadastroAPI';
@@ -13,6 +13,9 @@ import { enviarImagemProduto } from '../../api/cadastroAPI';
 //Componente
 import Cabecalho from '../../components/cabecalhoADM/index.js'
 import Rodapé from '../../components/rodapé/index.js';
+import { BuscaporId } from '../../api/produtoAPI';
+import { set } from 'local-storage';
+import { API_URL } from '../../api/config';
 
 export default function Index() {
     const [nome, setNome] = useState("");
@@ -27,19 +30,48 @@ export default function Index() {
 
     const [idDepartamento, setIdDepartamento] = useState();
     const [departamentos, setDepartamentos] = useState([]);
+    const [id, setId ] = useState();
 
+    const { idParam } = useParams();    
     
+    async function carregarProduto(){
+        if(!idParam) return;
+
+        const resposta = await BuscaporId(idParam);
+        
+        setId(resposta.info.id)
+        setNome(resposta.info.nome);
+        setValor(resposta.info.valor);
+        setDesconto(resposta.info.desconto);
+        setEstoque(resposta.info.estoque);
+        setDescricao(resposta.info.descricao);
+        setIdDepartamento(resposta.info.departamento);
+        setMarca(resposta.info.marca);
+
+        if(resposta.img_produto.length > 0){
+            setImagem(resposta.img_produto[0]);
+        }        
+        
+    }
     async function salvarClick() {
         try {
 
             if(!imagem){
                 throw new Error("Insira uma imagem!");
             }
-
+            
+            if(id === 0){
             const  novoProduto = await cadastroProduto(idDepartamento, marca, nome, valor, desconto, estoque, descricao);
-            const r =  await enviarImagemProduto(novoProduto.id, imagem  )
-           
-            alert('🚀 Produto cadastrado com sucesso! ');
+            await enviarImagemProduto(novoProduto.id, imagem);
+            setId(novoProduto.id)
+
+            alert('🚀 Produto cadastrado com sucesso! ');}
+            else{
+                await alterarProduto(id, idDepartamento, marca, nome, valor, desconto, estoque, descricao);
+                await enviarImagemProduto(id, imagem);
+            alert('Produto alterado com sucesso')
+            }
+
         } catch(err) {
             alert(err.response.data.erro);
         }
@@ -58,11 +90,11 @@ export default function Index() {
         setMarcas(r);
     }
 
-
     useEffect(() => {
         carregarMarcas();
         carregarDepartamentos();
-    }, [])
+        carregarProduto();
+    }, []);
 
 
 
@@ -72,7 +104,15 @@ export default function Index() {
 
 
     function mostrarImagem(){
+        if(imagem === undefined){
+            return '/imagem.svg';
+        }
+        else if(typeof (imagem) === 'string'){
+            return `${API_URL}/${imagem}`
+        }
+        else{
         return URL.createObjectURL(imagem)
+    }
     }
 
     return (

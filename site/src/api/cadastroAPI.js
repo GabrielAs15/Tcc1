@@ -28,3 +28,16 @@ export async function enviarImagemProduto(id, imagem){
     });
     return resposta.status;
 }
+
+export async function alterarProduto(id, idDepartamento, marca, nome, valor, desconto, estoque, descricao){
+    const r = await api.put(`/produto/${id}`, {
+        idDepartamento: idDepartamento,
+        marca: marca,
+        nome: nome,
+        valor: valor,
+        desconto: desconto,
+        estoque: estoque,
+        descricao: descricao
+    });
+    return r.data;
+}
