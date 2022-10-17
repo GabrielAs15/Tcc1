@@ -1,0 +1,31 @@
+.contPrincipal{
+
+    display: flex;
+    padding: 5em;
+
+    .contIMG{
+        border-style: solid;
+    }
+
+    .imgProduto{
+        width: 3em;    
+    }
+
+    .infoProduto{
+        border-style: solid;
+    }
+
+    .subCont{
+        border-style: solid;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        background-color: rgba(207, 204, 204, 1);
+    }
+
+    .remove{
+        width: 1em;
+    }
+
+}

@@ -10,6 +10,8 @@ import BuscarProduto from './pages/BuscarProduto/BuscarProdutos.js'
 
 import LoginUsuario from './pages/LoginUsuario/index.js'
 
+import Test from './components/carrinhoProtudo/index.js'
+
 export default function AppRoutes() {
     return(
         <BrowserRouter>
@@ -20,6 +22,7 @@ export default function AppRoutes() {
                 <Route path="/produto/:idParam" element={<Cadastro />} />
                 <Route path='/BuscarProduto' element={<BuscarProduto />} />
                 <Route path='/LoginUsuario' element={<LoginUsuario />} />
+                <Route path='/Test' element={<Test/>} />
             </Routes>
         </BrowserRouter>
     );  
