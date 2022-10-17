@@ -52,6 +52,12 @@ export default function Index(){
         }
     }
 
+    useEffect(() => {
+        if('usuario-logado'){
+            navigate('/cadastro')
+    }
+})
+
     return(
         <div className='Page-Login'>
 
