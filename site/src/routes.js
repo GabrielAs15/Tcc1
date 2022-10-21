@@ -46,7 +46,7 @@ export default function AppRoutes() {
                 <Route path="/Carrinho" element={<Carrinho/>}/>
                 <Route path="/Entrega" element={<Entrega/>}/>
                 <Route path="/PagamentoCartao" element={<PagCartao/>}/>
-                <Route path="/Revisar" element={<Revisar/>}/>
+                <Route path="/Revisar" element={<Revisar/>}/> 
             </Routes>
         </BrowserRouter>
     );  
