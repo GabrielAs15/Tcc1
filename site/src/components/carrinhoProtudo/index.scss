@@ -1,18 +1,23 @@
 .contPrincipal{
 
     display: flex;
-    padding: 5em;
+    padding: 1em;
+    border-radius: 10px;
+    border:solid;
+    max-width: 30%;
 
     .contIMG{
         border-style: solid;
+        border-color: red;
     }
 
     .imgProduto{
-        width: 3em;    
+        width: 1em;    
     }
 
     .infoProduto{
         border-style: solid;
+        border-color:blue;
     }
 
     .subCont{

@@ -12,15 +12,22 @@ import LoginUsuario from './pages/LoginUsuario/index.js'
 
 import Test from './components/carrinhoProtudo/index.js'
 
-import MinhaConta from './pages/MinhaConta/index.js'
-
 import MeusPedidos from './pages/MeusPedidos/index.js'
 
 import MeusDados from './pages/MeusDados/index.js'
 
 import Endereços from './pages/Endereços/index.js'
 
-import PaginaProduto from './pages/PáginaProduto/index.js'
+import PaginaProduto from './pages/carrinho/index.js'
+
+import Carrinho from './pages/carrinho/index'
+
+import Entrega from './pages/carrinho/index'
+
+import PagCartao from './pages/carrinho/index'
+
+import Revisar from './pages/carrinho/index'
+
 export default function AppRoutes() {
     return(
         <BrowserRouter>
@@ -33,10 +40,13 @@ export default function AppRoutes() {
                 <Route path='/LoginUsuario' element={<LoginUsuario />} />
                 <Route path='/Test' element={<Test/>} />
                 <Route path='/PaginaProduto' element={<PaginaProduto/>} />
-                <Route path='/MinhaConta' element={<MinhaConta/>} />
                 <Route path='/MeusDados' element={<MeusDados/>}/>
                 <Route path='/MeusPedidos' element={<MeusPedidos/>}/>
                 <Route path="/Endereços" element={<Endereços/>}/>
+                <Route path="/Carrinho" element={<Carrinho/>}/>
+                <Route path="/Entrega" element={<Entrega/>}/>
+                <Route path="/PagamentoCartao" element={<PagCartao/>}/>
+                <Route path="/Revisar" element={<Revisar/>}/>
             </Routes>
         </BrowserRouter>
     );  
