@@ -2,7 +2,7 @@ import './index.scss';
 
 export default function index() {
     return(
-        <main>
+        <main className='fundo'>
             <div className='contPrincipal'>
                 <div className='contIMG'>
                     <img src="../images/placaGTX 38.png" className='imgProduto'/>
