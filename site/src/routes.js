@@ -12,6 +12,15 @@ import LoginUsuario from './pages/LoginUsuario/index.js'
 
 import Test from './components/carrinhoProtudo/index.js'
 
+import MinhaConta from './pages/MinhaConta/index.js'
+
+import MeusPedidos from './pages/MeusPedidos/index.js'
+
+import MeusDados from './pages/MeusDados/index.js'
+
+import Endereços from './pages/Endereços/index.js'
+
+import PaginaProduto from './pages/PáginaProduto/index.js'
 export default function AppRoutes() {
     return(
         <BrowserRouter>
@@ -23,6 +32,11 @@ export default function AppRoutes() {
                 <Route path='/BuscarProduto' element={<BuscarProduto />} />
                 <Route path='/LoginUsuario' element={<LoginUsuario />} />
                 <Route path='/Test' element={<Test/>} />
+                <Route path='/PaginaProduto' element={<PaginaProduto/>} />
+                <Route path='/MinhaConta' element={<MinhaConta/>} />
+                <Route path='/MeusDados' element={<MeusDados/>}/>
+                <Route path='/MeusPedidos' element={<MeusPedidos/>}/>
+                <Route path="/Endereços" element={<Endereços/>}/>
             </Routes>
         </BrowserRouter>
     );  
