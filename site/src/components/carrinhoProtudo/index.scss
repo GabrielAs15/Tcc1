@@ -1,32 +1,53 @@
+main{
+    background-color: #F0F0F0;
+}
 .contPrincipal{
 
     display: flex;
-    padding: 1em;
+    padding: 1.5em;
     border-radius: 10px;
-    border:solid;
     max-width: 30%;
+    background-color:white ;
+    justify-content: space-around;
+    width: 35em;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.150);
 
-    .contIMG{
-        border-style: solid;
-        border-color: red;
-    }
+   
 
     .imgProduto{
-        width: 1em;    
+        width: 4.5em;    
+
     }
 
     .infoProduto{
-        border-style: solid;
-        border-color:blue;
+      
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .info-text{
+        font-family: alata;
     }
 
     .subCont{
-        border-style: solid;
+        border-radius: 10px;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
-        background-color: rgba(207, 204, 204, 1);
+        background-color: #EFEFEF;
+    }
+
+    .zero{
+        padding-left:5px ;
+        padding-right:5px ;
+    }
+
+    .contagem{
+        display: flex;
+        flex-direction: row;
+        font-family: alata;
     }
 
     .remove{

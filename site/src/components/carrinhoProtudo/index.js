@@ -5,7 +5,7 @@ export default function index() {
         <main>
             <div className='contPrincipal'>
                 <div className='contIMG'>
-                    <img src="../images/placaGTX 38.png" className=''/>
+                    <img src="../images/placaGTX 38.png" className='imgProduto'/>
                 </div>
 
                 <div className='infoProduto'>
@@ -13,15 +13,17 @@ export default function index() {
                         <p className='info-text'>Placa de video</p>
                     </div>
                     <div className='preco'>
-                        <p className='info-preco'>R$1.000,00</p>
+                        <p className='info-text'>R$1.000,00</p>
                     </div>
                 </div>
 
                 <div className='subCont'>
-                    <p className='cont-text'>Quantidade</p>
+                    <p className='info-text'>Quantidade</p>
 
                     <div className='contagem'>
-                        <p>- 0 +</p>
+                        <button className='info-text'>-</button>
+                        <p className='zero'> 0 </p>
+                        <button className='info-text'> + </button>
                     </div>
 
                     <div>

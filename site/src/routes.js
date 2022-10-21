@@ -18,15 +18,15 @@ import MeusDados from './pages/MeusDados/index.js'
 
 import Endereços from './pages/Endereços/index.js'
 
-import PaginaProduto from './pages/carrinho/index.js'
+import PaginaProduto from './pages/PáginaProduto/index.js'
 
-import Carrinho from './pages/carrinho/index'
+import Carrinho from './pages/Carrinho'
 
-import Entrega from './pages/carrinho/index'
+import Entrega from './pages/Entrega'
 
-import PagCartao from './pages/carrinho/index'
+import PagCartao from './pages/PagCartao'
 
-import Revisar from './pages/carrinho/index'
+import Revisar from './pages/Revisar'
 
 export default function AppRoutes() {
     return(
