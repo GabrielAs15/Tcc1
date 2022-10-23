@@ -8,15 +8,16 @@ import Cabecalho from '../../components/cabecalhoADM/index.js'
 // Hooks
 import { Link, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-
-
 //API
 import { mostrarTodosProdutos, showImage, buscaPorNome, removerProduto } from '../../api/produtoAPI';
-import { set } from 'local-storage';
 
 //React
 import 'react-confirm-alert/src/react-confirm-alert.css';
 import { confirmAlert } from 'react-confirm-alert';
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 export default function Index(){
 const [produto, setProduto] = useState([]);
@@ -44,7 +45,7 @@ async function removerClick(id, nome){
                 if(filtro === ''){
                     carregarTodosProdutos();
                 }
-                alert("Produto removido com sucesso");
+                toast.dark("Produto removido com sucesso");
                 }
             },
             {
@@ -68,7 +69,7 @@ function editar(id){
 useEffect(() => {
     carregarTodosProdutos();
 }, []);
-
+    
 
 
 return(
@@ -126,6 +127,7 @@ return(
                     <Link className='txt' to="/Cadastro" > Alterar informações </Link>
                 </div>
             </div>
+            <ToastContainer />
         </main>
     )
 }

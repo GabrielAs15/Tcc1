@@ -23,28 +23,22 @@ export default function Index(){
     const [Carregando, setCarregando] = useState(false);
 
     const navigate = useNavigate();
-    // const refe = useRef(null);
 
 
     async function entrarClick() {
-        // ref.current.continuousStart();
         setCarregando(true);
 
         try {
-            const r = await loginUsuario    (email, senha);
+            const r = await loginUsuario(email, senha);
             if(r){
                 storage('usuario-logado', r)
                 setTimeout(() => {
-                    navigate('/BuscarProduto');
+                    navigate('/MinhaConta');
                 }, 3000)
             }
-           
-            else {
-                alert("Credenciais inválidas!")
-            }
+            
         }
         catch (err){
-           // ref.current.complete();
             setCarregando(false);
             if(err.response.status === 401){
                 setErro(err.response.data.erro);
@@ -53,8 +47,8 @@ export default function Index(){
     }
 
     useEffect(() => {
-        if('usuario-logado'){
-            navigate('/cadastro')
+        if(storage('usuario-logado')){
+            navigate('/MinhaConta')
     }
 })
 

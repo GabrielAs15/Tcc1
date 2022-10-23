@@ -60,12 +60,13 @@ export default function Index() {
                 throw new Error("Insira uma imagem!");
             }
             
-            if(id === 0){
+            if(!id){
             const  novoProduto = await cadastroProduto(idDepartamento, marca, nome, valor, desconto, estoque, descricao);
             await enviarImagemProduto(novoProduto.id, imagem);
             setId(novoProduto.id)
 
-            alert('🚀 Produto cadastrado com sucesso! ');}
+            alert('🚀 Produto cadastrado com sucesso! ');
+            }
             else{
                 await alterarProduto(id, idDepartamento, marca, nome, valor, desconto, estoque, descricao);
                 await enviarImagemProduto(id, imagem);

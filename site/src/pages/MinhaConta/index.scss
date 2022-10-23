@@ -1,0 +1,31 @@
+.pagina{
+    min-height: 103vh;
+    background-color: #f0f0f0;
+
+    .barra{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        line-height: 3em;
+        border: solid #000;
+    }
+    .barrinha{
+        display: flex;
+        flex-direction: column;
+        background-color: #000;
+        color: #000;
+    }
+    .cards{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .card{
+        background-color: #ffffff;
+        max-width: 15em;
+        margin: 1em;
+        padding: 1em;
+        box-shadow: 1px 1px 1px gray;
+        border-radius: 15px;
+    }
+}

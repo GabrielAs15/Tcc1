@@ -9,8 +9,10 @@ import departamentoController from  './controller/departamentocontroller.js'
 import marcaController from './controller/marcacontroller.js'
 import cadastrousuarioController from './controller/cadastrousuariocontroller.js'
 import loginUsuarioController from './controller/loginusuariocontroller.js';
+import buscarUsuarioController  from './controller/buscarusuariocontroller.js';
+
 const server = express();
-server.use(cors());   
+server.use(cors());
 server.use(express.json());
 
 server.use('/storage/imgProduto', express.static('storage/imgProduto'));
@@ -21,5 +23,6 @@ server.use(departamentoController);
 server.use(marcaController);
 server.use(cadastrousuarioController);
 server.use(loginUsuarioController);
+server.use(buscarUsuarioController);
 
 server.listen(process.env.PORT, () => console.log(`API online na porta ${process.env.PORT}`));

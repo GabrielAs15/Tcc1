@@ -28,6 +28,7 @@ import PagCartao from './pages/PagCartao'
 
 import Revisar from './pages/Revisar'
 
+import MinhaConta from './pages/MinhaConta/index.js'
 export default function AppRoutes() {
     return(
         <BrowserRouter>
@@ -47,6 +48,7 @@ export default function AppRoutes() {
                 <Route path="/Entrega" element={<Entrega/>}/>
                 <Route path="/PagamentoCartao" element={<PagCartao/>}/>
                 <Route path="/Revisar" element={<Revisar/>}/> 
+                <Route path='/MinhaConta' element={<MinhaConta/>}/>
             </Routes>
         </BrowserRouter>
     );  

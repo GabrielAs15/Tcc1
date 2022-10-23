@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import './index.scss';
 import { useNavigate } from 'react-router-dom';
 import storage from 'local-storage'
+import { Scrollbars } from 'react-custom-scrollbars-2';
 
 
 export default function Index() {
@@ -34,13 +35,14 @@ export default function Index() {
     }
 
     return (
-        <header className="cabecalho-page" >
+        <header className="cabecalho-pagina" >
             <div>
                 <img src="./images/menu.png" className="menu" onClick={MostrarMenu} />
             </div>
 
             {menu === true &&
                 <div className='menu-page'>
+                <Scrollbars className="scroll"style={{ width: 400, height: 100 }}>
 
                     <div className='menu-content'>
                         <p className='t3'> MENU </p>
@@ -61,6 +63,7 @@ export default function Index() {
                         <button className='b1'> Login </button>
                         <button className='b2' onClick={sairClick}> Sair </button>
                     </div>
+                    </Scrollbars>
                 </div>
 
             }
