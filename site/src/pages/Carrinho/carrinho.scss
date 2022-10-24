@@ -1,3 +1,17 @@
 .page{
-    background-color: black;
+    background-color: #F0F0F0;
+
+    .cont1{
+        border-style: solid;
+    }
+
+    .cont2{
+        border-style: solid;
+        border-color:red;
+    }
+
+    .cont3{
+        border-style: solid;
+        border-color:blue;
+    }
 }
