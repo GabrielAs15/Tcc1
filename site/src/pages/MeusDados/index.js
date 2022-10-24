@@ -4,7 +4,7 @@ import './index.scss'
 
 export default function Index(){
     return(
-        <div>
+        <div className='dados-page'> 
             <Cabecalho />
             <div>
                 <div> Minha Conta </div>
@@ -15,7 +15,18 @@ export default function Index(){
                 <div></div>
                 <div> Endereços </div>
             </div>
-            
+            <div className='box'>
+                <div className='box1'>
+                    <input type='text' />
+                    <input type='text' />
+                    <input type='text' />
+                </div>
+                <div className='box2'>
+                    <input type='text' />
+                    <input type='text' />
+                    <input type='text' />
+                </div>                      
+            </div>
         </div>
     )
 }
