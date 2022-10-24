@@ -7,7 +7,7 @@ export async function loginUsuario(email, senha){
             DS_EMAIL            email
      FROM   tb_usuario
      WHERE  DS_EMAIL       = ?
-     AND    DS_SENHA       = md5(?)`
+     AND    DS_SENHA       = ?`
 
 const [linhas] = await con.query(comando, [email, senha])
 return linhas[0];

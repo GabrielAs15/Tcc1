@@ -34,7 +34,7 @@ export default function Index() {
             navigate('/LoginUsuario')
         }
         else if (storage('usuario-logado')){
-            navigate('/MinhaConta')
+            navigate('')
         }
     }, [])
 

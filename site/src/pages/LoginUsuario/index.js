@@ -26,7 +26,7 @@ export default function Index(){
 
 
     async function entrarClick() {
-        setCarregando(true);
+        //setCarregando(true);
 
         try {
             const r = await loginUsuario(email, senha);
@@ -62,7 +62,7 @@ export default function Index(){
                 <input type='password'  placeholder='•••••' className='senha' value={senha} onChange={e => setSenha(e.target.value)}/>
                 <div className='Botão'>
                     <img src='./images/f1.png'/>
-                    <div onClick={entrarClick} disable={Carregando} className="entrar"> ENTRAR </div>
+                    <div onClick={entrarClick}  className="entrar"> ENTRAR </div>
                 </div>
             </div>
             <div className='link'>
