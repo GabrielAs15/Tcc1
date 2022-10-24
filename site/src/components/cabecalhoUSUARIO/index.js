@@ -23,7 +23,6 @@ export default function Index() {
         setMode3(!active3)
     }
     
-
     
 
     const navigate = useNavigate();
