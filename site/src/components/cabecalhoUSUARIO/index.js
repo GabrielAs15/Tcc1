@@ -87,7 +87,7 @@ export default function Index() {
                 <nav className='menu-page'>
                 <Scrollbars className="scroll"style={{ width: 300, height: 100 }}>
 
-                    <div className='menu-content'>
+                    <div className='menu-contents'>
                         <p className='t3'> MENU </p>
 
                         <div className='exit'> <img src='/images/x.png' onClick={TirarMenu} className="x" /> </div>
