@@ -1,0 +1,42 @@
+.cont01{
+    display: flex;
+    flex-direction: column;
+    min-height: 94vh;
+    background: linear-gradient(to bottom,#44BBE1, #365A9E);
+
+    .titulo{
+        font-family: 'alata';
+    }
+
+    .cont02{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items:center ;
+        min-height: 80vh;
+        
+    }
+    
+    .cont03{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width:  87%;
+        height: 40%;   
+      
+    }
+    
+    .sub-cont01{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width:45%;
+        height: 17em; 
+    }   
+     
+    input{
+        border-radius: 10px;
+        width: 400px;
+        height: 34px;
+    }
+}

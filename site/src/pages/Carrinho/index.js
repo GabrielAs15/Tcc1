@@ -2,6 +2,8 @@ import './carrinho.scss';
 
 import CarrinhoP from '../../components/carrinhoProtudo';
 import Cabecalho from '../../components/cabecalhoUSUARIO'
+import Rodape from '../../components/rodapé/index.js'
+
 export default function index() {
     return (
         <main className='page'>
@@ -21,18 +23,19 @@ export default function index() {
                     </div>
 
                     <div className='total'>
-                        
-                        <h2 className='sub-titulo'>Resumo da compra</h2>
-                        <p className='corverde'>Valor total</p>
+                         
+                        <h2 className='sub-titulo'> Resumo da compra </h2>
+                        <p className='corverde'> Valor total </p>
                         <p> R$2.000,00 </p>
                         <hr/>
                         <p className='corverde'> Frete </p>
                         <p> Grátis </p>
 
-                        <button className='botao'>Finalizar pedido</button>
+                        <button className='botao'> Finalizar pedido </button>
                     </div>
                 </div>
             </div>
+            <Rodape />
         </main>
     )
 }

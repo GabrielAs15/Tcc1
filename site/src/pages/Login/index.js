@@ -15,8 +15,6 @@ import { login } from '../../api/loginAPI';
 
 export default function Index(){
 
-  
-
     const [email, setEmail] = useState(''); 
     const [senha, setSenha] = useState('');
     const [erro, setErro] = useState('');

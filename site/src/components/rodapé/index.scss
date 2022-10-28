@@ -76,11 +76,15 @@
         display: flex;
         flex-direction: row;
         justify-content: space-around;
+        margin-left: 12em;
     }
     .coluna{
         display: flex;
         flex-direction: row;
         justify-content:space-around ;
+    }
+    .logos{
+        margin: 5px;
     }
   
 }

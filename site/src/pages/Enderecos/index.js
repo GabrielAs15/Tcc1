@@ -17,14 +17,16 @@ export default function Index(){
                 <div> Endereços </div>
             </div>
             <div className='content-adress'>
+                
                 <div className='adress-info'>
                     <div> Rua dos Bobos n°0 </div>
-                    <div> Liberdade </div>
+                    <div className='text2'> Liberdade </div>
                 </div>
                 <div className='adress-country'>
                     <div> São Paulo, SP </div>
-                    <div> Brasil </div> 
+                    <div className='text2'> Brasil </div> 
                 </div>
+                
             </div>
         </div>
     );

@@ -51,15 +51,10 @@ export default function Index() {
                     <img src="./images/appstorelogo.png" />
                 </div>
                 <div className="contatos">
-                    <div>
-                        <img src="./images/twitterlogo.png" />
-                    </div>
-                    <div>
-                        <img src="./images/whatslogo.png" />
-                    </div>
-                    
-                    <img src="./images/instalogo.png" />
-                    <img src="./images/linkedinlogo.png" />
+                    <img src="./images/twitterlogo.png" className='logos'/>                    
+                    <img src="./images/whatslogo.png" className='logos'/>
+                    <img src="./images/instalogo.png" className='logos'/>
+                    <img src="./images/linkedinlogo.png" className='logos'/>
                 </div>
             </div>
         </div>

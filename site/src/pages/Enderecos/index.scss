@@ -1,11 +1,46 @@
 .endereços-page{
     display: flex;
     flex-direction: column;
-    min-height: 90vh;
+    min-height: 100vh;
     background-color: #F0F0F0;
     font-family: 'Alata';
 
     .content-adress{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
         background-color: #FFFFFF;
+        max-width: 50%;
+        margin: 2em 20em;
+        padding: 2em;
+        border-radius: 10px;
+        border: solid 1px;
+    }
+
+    .text2{
+        margin-left: 1.2em;
+    }
+    
+    .adress-info{
+        display: flex;
+        flex-direction: column  ;
+        max-width: 40%;
+        margin-right: 6em;
+        margin-left: 2em;
+        margin-top: 1em ;
+    }
+
+
+    .adress-country{
+        display: flex;
+        flex-direction: column;
+        max-width: 50%;
+        margin-top: 1em;
+    }
+
+
+
+    .mapa{
+        width: 4em;
     }
 }
