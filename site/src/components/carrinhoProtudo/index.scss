@@ -6,7 +6,7 @@
     display: flex;
     padding: 1.5em;
     border-radius: 10px;
-    max-width: 30%;
+    max-width: 150%;
     background-color:white ;
     justify-content: space-around;
     width: 35em;
@@ -15,9 +15,9 @@
    
 
     .imgProduto{
-        width: 4.5em;    
-
+        width: 10em;
     }
+
 
     .infoProduto{
       
@@ -37,6 +37,7 @@
         align-items: center;
         justify-content: space-around;
         background-color: #EFEFEF;
+        padding: 2em;
     }
 
     .zero{

@@ -1,17 +1,78 @@
 .page{
     background-color: #F0F0F0;
+    min-height: 93vh;
 
-    .cont1{
-        border-style: solid;
+    .container-1{
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10em;
+        display: flex;
+        flex-direction: row;
+        max-width: 86%; 
     }
 
-    .cont2{
-        border-style: solid;
-        border-color:red;
+
+    .container-2{
+        display: flex;
+        flex-direction: row;
+        max-width: 100%;
+    }
+    
+
+    .componente{
+        display: flex;
+        flex-direction: column;
     }
 
-    .cont3{
-        border-style: solid;
-        border-color:blue;
+
+    .total{
+        font-family: 'Aldrich';
+        display: flex;
+        text-align: center;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        line-height: 3em;
+        border-radius: 5px;
+        height: 28em;
+        width: 30em;
+        margin-bottom: 4em;
+        background-color: #FFFFFF;
+        box-shadow: 3px 4px 2px #00000026;   
+        padding-top: 2em;
+    }
+
+
+    .sub-titulo{
+        font-size: 1.5em;
+        margin-top: -3em;
+    }
+
+
+    .botao{
+        font-size: 20px;
+        color:rgb(255, 255, 255);
+        background-color: #2b981a;
+        border-radius: 10px;
+        width: 8em;
+        height: 2em;
+        text-transform:none;
+        align-items:flex-end;
+        cursor: pointer;
+    }
+    .botao:hover{
+        background-color: #36ac24;
+        border-radius: 10px;
+        width: 8em;
+        height: 2em;
+    }
+
+    
+
+    hr{
+        width: 10em;
+    }
+    .corverde{
+        color: #116803;
     }
 }

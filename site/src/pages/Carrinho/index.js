@@ -6,34 +6,33 @@ export default function index() {
     return (
         <main className='page'>
             <Cabecalho />
-            <div className='cont1'>
-
-                <div className="progressBar">
-                    k
-                </div>
-              
-                   
-                <div className="cont2">
-                    <CarrinhoP className='carrinho' />
-                </div>
-
-                <div className="cont3">
-                    <CarrinhoP className='carrinho' />
-                </div>
-
-                <div>
-                    <h2>Resumo da compra</h2>
-
-                    <p>Valor total <br/> R$2.000,00</p>
-                    
-                    <hr/>
-                    <p>Frete <br/> Grátis</p>
-
-                    <button>Finalizar pedido</button>
-                </div>
-            
+            <div className="progressBar">
+                
             </div>
+            <div className='container-1'>       
+                <div className='container-2'>
+                    <div className='componente'>
+                        <div className="cont2">
+                            <CarrinhoP className='componente-carrinho' />
+                        </div>
+                        <div className="cont3">
+                            <CarrinhoP className='componente-carrinho' />
+                        </div>
+                    </div>
 
+                    <div className='total'>
+                        
+                        <h2 className='sub-titulo'>Resumo da compra</h2>
+                        <p className='corverde'>Valor total</p>
+                        <p> R$2.000,00 </p>
+                        <hr/>
+                        <p className='corverde'> Frete </p>
+                        <p> Grátis </p>
+
+                        <button className='botao'>Finalizar pedido</button>
+                    </div>
+                </div>
+            </div>
         </main>
     )
 }
