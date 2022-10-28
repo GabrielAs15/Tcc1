@@ -1,0 +1,11 @@
+.endereços-page{
+    display: flex;
+    flex-direction: column;
+    min-height: 90vh;
+    background-color: #F0F0F0;
+    font-family: 'Alata';
+
+    .content-adress{
+        background-color: #FFFFFF;
+    }
+}

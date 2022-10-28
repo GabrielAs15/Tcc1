@@ -21,7 +21,7 @@ export default function Index(){
                     <input type='text' placeholder='E-mail' className='caixa'/>
                     <input type='text' placeholder='CPF'className='caixa'/>
                 </div>
-                <div className='box2'>
+                <div className='box2'>  
                     <input type='text' placeholder='celular' className='caixa'/>
                     <input type='text' placeholder='endereço' className='caixa'/>
                     <input type='text' placeholder='bairro' className='caixa'/>

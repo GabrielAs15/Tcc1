@@ -16,7 +16,7 @@ import MeusPedidos from './pages/MeusPedidos/index.js'
 
 import MeusDados from './pages/MeusDados/index.js'
 
-import Endereços from './pages/Endereços/index.js'
+import Enderecos from './pages/Enderecos/index.js'
 
 import PaginaProduto from './pages/PáginaProduto/index.js'
 
@@ -43,7 +43,7 @@ export default function AppRoutes() {
                 <Route path='/PaginaProduto' element={<PaginaProduto/>} />
                 <Route path='/MeusDados' element={<MeusDados/>}/>
                 <Route path='/MeusPedidos' element={<MeusPedidos/>}/>
-                <Route path="/Endereços" element={<Endereços/>}/>
+                <Route path="/Enderecos" element={<Enderecos/>}/>
                 <Route path="/Carrinho" element={<Carrinho/>}/>
                 <Route path="/Entrega" element={<Entrega/>}/>
                 <Route path="/PagamentoCartao" element={<PagCartao/>}/>
