@@ -7,14 +7,15 @@ export default function Index(){
         <div className='dados-page'> 
             <Cabecalho />
             <div className="navbar">
-                <div> Minha Conta </div>
-                <div></div>
-                <div> Meus Dados </div>
-                <div></div>
-                <div> Meus Pedidos </div>
-                <div></div>
-                <div> Endereços </div>
+                <div className='texto-nav'> Minha Conta </div>
+                <div>|</div>
+                <div className='texto-nav' > Meus Dados </div>
+                <div>|</div>
+                <div className='texto-nav'> Meus Pedidos </div>
+                <div>|</div>
+                <div className='texto-nav'> Endereços </div>
             </div>
+            <div className='título-pmdds'> Altere seus Dados </div>
             <div className='box'>
                 <div className='box1'>
                     <input type='text' placeholder='Nome' className='caixa'/>
@@ -27,6 +28,11 @@ export default function Index(){
                     <input type='text' placeholder='bairro' className='caixa'/>
                 </div>                      
             </div>
+            <button className='change'> Trocar senha </button>
+            <hr className='line-button'/>
+            
         </div>
     )
 }
+
+
