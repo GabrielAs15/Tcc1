@@ -4,10 +4,9 @@
     font-family: 'Alata';
     
     padding: 10%;
-    margin-left :-3em;
-    margin-right: -3em;
-    margin-bottom: -3em;
-
+    max-width: 100em;
+    margin: -3em;
+    margin-top: 2em;
     .colunas{
         display: flex;
         flex-direction: row;

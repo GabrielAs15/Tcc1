@@ -54,8 +54,7 @@ async function removerClick(id, nome){
         ]
     })
 
-   
-    
+
 }
 
 async function carregarTodosProdutos(){
