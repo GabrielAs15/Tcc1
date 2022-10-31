@@ -31,6 +31,8 @@ import Revisar from './pages/Revisar'
 import CadastrarEnd from './pages/CadastrarEnd/index.js'
 
 import MinhaConta from './pages/MinhaConta/index.js'
+
+import SobreNos from './pages/SobreNos/index.js'
 export default function AppRoutes() {
     return(
         <BrowserRouter>
@@ -52,6 +54,7 @@ export default function AppRoutes() {
                 <Route path="/Revisar" element={<Revisar/>}/> 
                 <Route path='/MinhaConta' element={<MinhaConta/>}/>
                 <Route path='/CadastrarEndereco' element={<CadastrarEnd/>}/>
+                <Route path='/SobreNos' element={<SobreNos/>}/>
             </Routes>
         </BrowserRouter>
     );  
