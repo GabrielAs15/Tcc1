@@ -9,6 +9,7 @@
     display: flex;
     flex-direction: row;
     margin: 4em;
+    
     }
 
     input{
@@ -32,5 +33,34 @@
         border: none;
         border-radius: 5px;
         padding: 1em;
+    }
+
+    .navbar{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        font-family: 'Alata';
+        background-color: #ffffff;
+        padding: .5em 0em;
+        margin: 1em;
+    }
+
+    .título-pmdds{
+        text-align: center;
+        color: #000000;
+        font-family: 'Alata';
+        font-size: 25px;
+        margin-top: 2em;
+    }
+
+    
+    .change{
+        color: #353434;
+
+    }
+    .line-button{
+        text-align: center;
+        max-width: 10em;
+        margin-left: 35em;
     }
 }
