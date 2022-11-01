@@ -41,7 +41,7 @@ export default function Index() {
             </div>
 
             {menu === true &&
-                <div className='menu-pages'>
+                <div className='menu-paginas'>
                 <Scrollbars className="scroll"style={{ width: 400, height: 100 }}>
 
                     <div className='menu-content'>
