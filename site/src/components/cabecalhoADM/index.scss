@@ -6,12 +6,12 @@
     //flex-box
     display: flex;
     flex-direction: row;    
-    justify-content: space-between;
+    justify-content: space-around ;
 
     //espaçamento
-    padding: 0px 80px;
-    width: 111.75%;
-    position: fixed;
+    padding: 0px 0px;
+    width: 100%;
+
     padding-bottom: 10px;
     
     
@@ -27,7 +27,7 @@
     .menu{
         width: 3em;
         margin-top: 1.5em;
-        margin-left: 9em;
+        margin-left: 0px;
     }
 
     .faq, .carrinho{
@@ -55,15 +55,16 @@
 
    
     
-    .menu-pages{
-        background: #365A9E;
-        margin: 10em -10px;
-        padding: 1em 8em;
-        margin-top: 0em;
-        padding-bottom: 42em;
+    .menu-paginas{
+        background: linear-gradient(to bottom, #44BBE1, #365A9E);
+        margin: 0em 0px;
         position: absolute;
-        height: 290%;
-        line-height: 2em;
+        left: 0px;
+        padding: 1em 5em;
+        margin-top: 0em;
+        position: absolute;
+        height: 150%;
+        line-height: 4em;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;   
@@ -85,7 +86,7 @@
     
 
     .menu-content{
-        margin-top: -15em;
+        margin-top: -30em;
         font-family: 'Aldrich';
         font-size: 1.5em;
         margin-bottom: 2em;
@@ -104,12 +105,9 @@
         line-height:inherit;
     }
 
-    .line1, .line2, .line3, .line4{
+    .linha1, .linha2, .linha3, .linha4, .linha5, .linha6, .linha7, .linha8{
         padding: 15px;
-    }
-
-    .line1:hover, .line2:hover, .line3:hover, .line4:hover  {
-        background-color: #416dbe;
+        font-weight: 600;
     }
 
    
@@ -134,7 +132,10 @@
     .perifericos:hover{
         background-color: #416dbe;
     }
-   
+    
+    .linha1:hover, .linha5:hover, .linha6:hover, .linha7:hover, .linha8:hover{
+        background-color: #416dbe;
+    }
 
     .c1-txt:hover{
         background-color: #416dbe;
@@ -167,5 +168,15 @@
 
     .c1{
         margin-left: 1em;
+    }
+
+    .lupa{
+        margin-bottom: -.7em;
+        height: 2.1em;
+        margin-left: -2em;
+    }
+    input{
+        border: none;
+
     }
 }
