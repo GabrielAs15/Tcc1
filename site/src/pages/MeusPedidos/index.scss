@@ -1,0 +1,24 @@
+.Page{
+    display:flex;
+    flex-direction: column;
+    background-color:#CFCCCC;
+
+    .black{
+        background-color: black;
+        Color:white;
+        padding-left:1em;
+    }
+
+    .Cont01{
+        display: flex;
+        flex-direction: row;
+        
+    }
+
+    p{
+        border-style:solid;
+    }
+    
+
+    
+}

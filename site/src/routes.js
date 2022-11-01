@@ -35,6 +35,8 @@ import MinhaConta from './pages/MinhaConta/index.js'
 import SobreNos from './pages/SobreNos/index.js'
 
 import PedidosAbertos from './pages/PedidosAbertos/index.js'
+
+import StatusPedido from './pages/StatusPedidos/index.js'
 export default function AppRoutes() {
     return(
         <BrowserRouter>
@@ -58,6 +60,7 @@ export default function AppRoutes() {
                 <Route path='/CadastrarEndereco' element={<CadastrarEnd/>}/>
                 <Route path='/SobreNos' element={<SobreNos/>}/>
                 <Route path="/PedidosAbertos" element={<PedidosAbertos/>} />
+                <Route path="/StatusPedido" element={<StatusPedido/>} />
             </Routes>
         </BrowserRouter>
     );  
