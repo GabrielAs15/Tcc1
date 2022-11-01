@@ -1,14 +1,58 @@
 .pagina-tda{
     background-color: #F0F0F0;
     min-height: 93vh;
+    font-family: Aldrich;
     
     .section-1{
-        margin-left: auto;
-        margin-right: auto;
         margin-top: 10em;
         margin-bottom: 12em;
         display: flex;
         flex-direction: column;
-        max-width: 86%; 
+    }
+
+    .section-2{
+        margin-top: 5em;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .div-1{
+        display: flex;
+        margin-left: 10em;
+    }
+
+    .div-2{
+        display: flex;
+        margin-left: 10em;
+    }
+
+    .div-3{
+        display: flex;
+        margin-left: 10em;
+    }
+
+    .div-4{
+        display: flex;
+        margin-left: 10em;
+    }
+
+    img{
+        width: 4em;
+        height: 4em;
+        margin-left: 10em;
+    }
+
+    h1{
+        text-align: center;
+    }
+
+    
+    .sub-1{
+        margin-top: 2em;
+    }
+
+    input{
+        margin-right: 1em;
+        cursor: pointer;
     }
 }
