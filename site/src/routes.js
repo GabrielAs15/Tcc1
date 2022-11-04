@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Test from './components/PedidoProduto/index.js'
+import Test from './components/senhaAlterada/index.js'
 
 import Login from './pages/Login/index.js'
 
@@ -37,6 +37,8 @@ import SobreNos from './pages/SobreNos/index.js'
 import PedidosAbertos from './pages/PedidosAbertos/index.js'
 
 import StatusPedido from './pages/StatusPedidos/index.js'
+
+import RedefinirSenha from './pages/RedefinirSenha/index.js'
 export default function AppRoutes() {
     return(
         <BrowserRouter>
@@ -61,6 +63,7 @@ export default function AppRoutes() {
                 <Route path='/SobreNos' element={<SobreNos/>}/>
                 <Route path="/PedidosAbertos" element={<PedidosAbertos/>} />
                 <Route path="/StatusPedido" element={<StatusPedido/>} />
+                <Route path="/RedefinirSenha" element={<RedefinirSenha/>} />
             </Routes>
         </BrowserRouter>
     );  

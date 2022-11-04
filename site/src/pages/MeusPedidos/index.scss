@@ -1,24 +1,42 @@
-.Page{
-    display:flex;
+.Page {
+    display: flex;
     flex-direction: column;
-    background-color:#CFCCCC;
+    align-items: center;
+    background-color: #F0F0F0;
+    min-height: 93vh;
 
-    .black{
+
+
+
+
+    .black {
+        color: white;
         background-color: black;
-        Color:white;
-        padding-left:1em;
+        padding:0.3em 3em;
+        font-size:20px;
+
     }
 
-    .Cont01{
+    .Cont01 {
         display: flex;
         flex-direction: row;
+        cursor: pointer;
+        padding-bottom: 6em;
+    }
+
+    .textc{
+        padding:0.3em 3em;
+        font-size:20px;
         
     }
 
-    p{
-        border-style:solid;
+    p {
+        background-color: white;
+        font-family: Aldrich;
     }
-    
 
-    
+
+
+
+
 }

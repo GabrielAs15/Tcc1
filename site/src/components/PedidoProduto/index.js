@@ -3,7 +3,7 @@ import './Pedido.scss'
 export default function Index(){
     return(
 
-        <main >
+        <main className='main-1'>
             <div className='contPrincipal'>
                 <div className='contIMG'>
                     <img src="../images/placaGTX 38.png" className='imgProduto'/>
@@ -19,10 +19,11 @@ export default function Index(){
                 </div>
 
                 <div className='subCont'>
-                    <p>status</p>
+                    <p className='text'>status</p>
                     <img src='../../images/revisado.png'></img>
                 </div>
             </div>
+            <p className='remover'>X Remover</p>
         </main>
     )
 }

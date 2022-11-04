@@ -6,12 +6,18 @@ import Box from '../../components/PedidoProduto/index.js'
 export default function Index(){
     return(
         <main className='Page'>
-            <Cabecalho />
+            <Cabecalho className='comp' />
             <div className='Cont01'>
-                <p>MinhaConta</p>
-                <p>Meus dados</p>
-                <p>Meus pedidos</p>
-                <p>Endereços</p>
+                <p className='textc'>Minha Conta</p>
+                <p className='textc'>Meus dados</p>
+                <p className='black'>Meus pedidos</p>
+                <p className='textc'>Endereços</p>
+            </div>
+            <div>
+                <Box/>
+            </div>
+            <div>
+                <Box/>
             </div>
             <div>
                 <Box/>

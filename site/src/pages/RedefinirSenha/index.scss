@@ -1,0 +1,55 @@
+.page{
+        
+        display:flex;
+        flex-direction:column;
+        text-align:center;
+        background: linear-gradient(to bottom,#44BBE1, #365A9E);
+        padding-top:10em;
+
+    .senha{
+        border:transparent;
+        border-radius: 10px;
+        width: 371px;
+        height: 45px;
+        margin: 1em;
+        background-image: './images/image 53.png';
+    }
+
+    .senhaT{
+        font-family: alata;
+        font-size:48px;
+        padding-bottom: 1.5em;
+    }
+
+    .camp{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .campo{
+        display: flex;
+        flex-direction:row;
+        align-items: center;
+    }
+
+    .senhaI{
+        padding-bottom:-1em;
+        cursor: pointer;
+
+    }
+
+    .alteraB{
+        background-color: white; 
+        color: black; 
+        border: 2px solid white;
+        border-radius:15px;
+        padding: 0.5em 1.4em;
+        font-family:inter;
+        font-size:20px;
+        margin-top:3em;
+        margin-bottom: 3em;
+        cursor: pointer;
+    }
+
+}

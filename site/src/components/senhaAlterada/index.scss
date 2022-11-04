@@ -1,0 +1,21 @@
+.page-comp{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .comp{
+        display:flex;
+        flex-direction:column;
+        text-align:center;
+        background-color: rgba(255, 255, 255, 0.514);
+        border-radius:50px;
+        padding:2.5em 5em;
+    }
+
+    .texto{
+        font-family: alata;
+        font-size: 20px;
+    }
+
+    
+}
