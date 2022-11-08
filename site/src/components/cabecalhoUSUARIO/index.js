@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import './index.scss';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import storage from 'local-storage'
 import { Scrollbars } from 'react-custom-scrollbars-2';
 
@@ -153,7 +153,9 @@ export default function Index() {
                 <img className="lupa" src='./images/lupa.png' style={{width:40}}/>
             </div>
             <div className='t2'> Entrar </div>
-            <img src="./images/image 16.png" alt="faq" className='faq' />
+            <Link to="/SobreNos">
+                <img src="./images/image 16.png" alt="faq" className='faq' /> 
+            </Link>
             <img src="./images/image 15.png" alt="carrinho" className='carrinho' />
 
         </header>
