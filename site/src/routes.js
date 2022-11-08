@@ -39,10 +39,15 @@ import PedidosAbertos from './pages/PedidosAbertos/index.js'
 import StatusPedido from './pages/StatusPedidos/index.js'
 
 import RedefinirSenha from './pages/RedefinirSenha/index.js'
+
+import Home from './pages/PaginaInicial/index.js'
+
+
 export default function AppRoutes() {
     return(
         <BrowserRouter>
             <Routes>
+                <Route path="/" element={<Home />} />
                 <Route path="/CadastroCliente" element={<CadastroCliente />} />
                 <Route path="/Login" element={<Login />} />
                 <Route path="/Cadastro" element={<Cadastro />} />
