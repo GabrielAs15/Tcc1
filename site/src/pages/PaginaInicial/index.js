@@ -2,8 +2,10 @@ import './index.scss';
 
 //importações
 import Cabecalho from '../../components/cabecalhoUSUARIO'
+import Produto from '../../components/boxProduto'
 
 export default function Index(){
+
     return(
         <section className='Page-home'>
             <Cabecalho />
