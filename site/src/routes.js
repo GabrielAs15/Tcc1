@@ -20,8 +20,8 @@ import Enderecos from './pages/Enderecos/index.js'
 
 import PaginaProduto from './pages/PáginaProduto/index.js'
 
-import Carrinho from './pages/Carrinho'
-
+import Carrinho from './pages/Carrinho/index.js'
+    
 import Entrega from './pages/Entrega'
 
 import PagCartao from './pages/PagCartao'

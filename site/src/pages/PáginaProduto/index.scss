@@ -1,0 +1,27 @@
+.page-produto{
+    background-color: #F0F0F0;
+    min-height: 100vh;
+
+    .imagem-produto{
+        background-color: #FFFFFF;
+        border-radius: 2em;
+        max-width: 10em;
+    }
+    .imagem-produto-capa{
+        width: 10em;
+    }
+
+    .nome-produto-título{
+        background-color: #ffffff;
+        padding: 2em;
+        border-radius: 2em;
+        max-width: 10em;    
+    }
+
+    .botao-produto{
+        background-color: #2B981A;
+        border-radius: 13px;
+        padding: 1em;
+        color:#FFFFFF ;
+    }
+}

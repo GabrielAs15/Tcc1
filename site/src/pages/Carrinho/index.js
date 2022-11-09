@@ -6,7 +6,7 @@ import Rodape from '../../components/rodapé/index.js'
 
 export default function index() {
     return (
-        <main className='page'>
+        <main className='page-carrinho'>
             <Cabecalho />
             <div className="progressBar">
                 
@@ -22,8 +22,7 @@ export default function index() {
                         </div>
                     </div>
 
-                    <div className='total'>
-                         
+                    <div className='total-c'>
                         <h2 className='sub-titulo'> Resumo da compra </h2>
                         <p className='corverde'> Valor total </p>
                         <p> R$2.000,00 </p>

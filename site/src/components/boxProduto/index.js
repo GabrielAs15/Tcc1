@@ -1,6 +1,9 @@
+import { useState } from 'react';
 import './index.scss'
 
-export default function consultar(){
+export default function Consultar(){
+const [pedidoCliente, setPedidoCliente] = useState('');
+
     return(
          <main className='P'>
             <div className='box-produto'>
@@ -13,11 +16,17 @@ export default function consultar(){
             </div>
 
             <div className='info-produto'>
-                <p className='nome-produto'>Placa de Video</p>
-                <div className='preco'>
-                    <p className='valor-desconto'>DE: R$2.0000,00</p>
-                    <p className='valor-final'>POR: R$1.800,00</p>
-                </div>
+                {pedidoCliente.map (item => 
+                    <div>
+                        <p className='nome-produto'> {item.nome} </p>
+                        <div className='preco'>
+                        <p className='valor-desconto'> {item.valor}</p>
+                        <p className='valor-final'>POR: R$1.800,00</p>
+                        </div>
+                    </div>
+                )}
+                
+                
             </div>
         </div>
          </main>
