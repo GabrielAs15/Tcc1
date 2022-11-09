@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Test from './components/img-M/index'
+import Test from './components/boxProduto/index'
 
 import Login from './pages/Login/index.js'
 

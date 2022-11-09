@@ -23,21 +23,14 @@
         flex-direction: row;
     }
 
-    .img-B{
-        cursor:pointer;
-    }
-
-    .cont-P{
+    .cont-M{
         display: flex;
-        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content:flex-start;
+        padding-left:10em;
     }
 
-    .carrossel{
-        display: flex;
-        flex-direction: row;
-        overflow-x:auto;
-    }
-
+    
     
 
     //
