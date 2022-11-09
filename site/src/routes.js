@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Test from './components/senhaAlterada/index.js'
+import Test from './components/img-M/index'
 
 import Login from './pages/Login/index.js'
 
@@ -47,6 +47,7 @@ export default function AppRoutes() {
     return(
         <BrowserRouter>
             <Routes>
+                <Route path="/Test" element={<Test/>} /> 
                 <Route path="/" element={<Home />} />
                 <Route path="/CadastroCliente" element={<CadastroCliente />} />
                 <Route path="/Login" element={<Login />} />

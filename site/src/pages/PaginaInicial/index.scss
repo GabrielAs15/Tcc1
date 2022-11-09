@@ -22,4 +22,24 @@
         display: flex;
         flex-direction: row;
     }
+
+    .img-B{
+        cursor:pointer;
+    }
+
+    .cont-P{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .carrossel{
+        display: flex;
+        flex-direction: row;
+        overflow-x:auto;
+    }
+
+    
+
+    //
+
 }
