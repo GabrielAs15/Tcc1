@@ -104,7 +104,7 @@ export async function alterarProduto(id, produto){
             id_marca        = ?
      WHERE  id_produto  = ?`
 
-    const [resposta] = await con.query(comando, [produto.nome, produto.valor, produto.desconto, produto.estoque, produto.descricao, produto.departamento, produto.marca, id])
+    const [resposta] = await con.query(comando, [produto.nome, produto.valor, produto.desconto, produto.valorDesc, produto.estoque, produto.descricao, produto.departamento, produto.marca, id])
     return resposta.affectedRows;
 }
 

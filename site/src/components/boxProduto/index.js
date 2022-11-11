@@ -21,7 +21,7 @@ const [pedidoCliente, setPedidoCliente] = useState('');
                         <p className='nome-produto'> {item.nome} </p>
                         <div className='preco'>
                         <p className='valor-desconto'> {item.valor}</p>
-                        <p className='valor-final'>POR: R$1.800,00</p>
+                        <p className='valor-final'> {item.desconto} </p>
                         </div>
                     </div>
                 )}

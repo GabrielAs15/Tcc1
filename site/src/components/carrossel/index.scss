@@ -7,8 +7,12 @@
     flex-direction: row;
 }
 
-.carrossel{
+.carrossel {
     display: flex;
     flex-direction: row;
     overflow-x:auto;
+}
+
+.carrossel::-webkit-scrollbar{
+    display:none;
 }

@@ -1,40 +1,41 @@
-import './carrinho.scss';
+import './carinho.scss'
 
-import CarrinhoP from '../../components/carrinhoProtudo';
-import Cabecalho from '../../components/cabecalhoUSUARIO'
-import Rodape from '../../components/rodapé/index.js'
 
-export default function index() {
-    return (
-        <main className='page-carrinho'>
-            <Cabecalho />
-            <div className="progressBar">
-                
-            </div>
-            <div className='container-1'>       
-                <div className='container-2'>
-                    <div className='componente'>
-                        <div className="cont2">
-                            <CarrinhoP className='componente-carrinho' />
+import Cabecalho from '../../components/cabecalhoUSUARIO';
+import Produto from '../../components/carrinhoProduto';
+import Rodape from '../../components/rodapé';
+export default function Index(){
+
+    return(
+            <main className='pag-carrinhototal'>
+                <Cabecalho />
+                <div className='div-total-carrinho'>
+                    <div className='subdiv-total-carrinho'>
+                        <div className='pdt-carrinho'>
+                            <Produto />
                         </div>
-                        <div className="cont3">
-                            <CarrinhoP className='componente-carrinho' />
+                        <div className='pdt-carrinho'>
+                            <Produto />
                         </div>
                     </div>
+                    <div className='div-carrinho'>
+                        <div className='subdiv-carrinho'>
+                            <p className='text-carrinho'>Resumo da <br/> compra</p>
+                            <div className='fonte-carrinho'>    
+                                <p className='cor-carrinho'>Valor total</p>
+                                <p>R$2.000,00</p>
+                                <hr/>
+                                <p className='cor-carrinho'> Frete</p>
+                                <p>Grátis</p>
 
-                    <div className='total-c'>
-                        <h2 className='sub-titulo'> Resumo da compra </h2>
-                        <p className='corverde'> Valor total </p>
-                        <p> R$2.000,00 </p>
-                        <hr/>
-                        <p className='corverde'> Frete </p>
-                        <p> Grátis </p>
-
-                        <button className='botao'> Finalizar pedido </button>
+                                <div>
+                                    <button className='botao-carrinho'> <p className='text-botao-carrinho'>Finalizar Pedido</p></button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <Rodape />
-        </main>
+                <Rodape />
+            </main>
     )
 }

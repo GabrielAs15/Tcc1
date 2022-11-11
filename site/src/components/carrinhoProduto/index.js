@@ -21,9 +21,9 @@ export default function index() {
                     <p className='info-text'>Quantidade</p>
 
                     <div className='contagem'>
-                        <button className='info-text'>-</button>
+                        <button className='info-text-button'>-</button>
                         <p className='zero'> 0 </p>
-                        <button className='info-text'> + </button>
+                        <button className='info-text-button'> + </button>
                     </div>
 
                     <div>

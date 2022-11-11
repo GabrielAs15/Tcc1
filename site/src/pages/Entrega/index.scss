@@ -1,0 +1,73 @@
+.entrega-page{
+    
+    background-color: #F0F0F0;
+    font-family: 'Alata';
+    min-height: 93vh;
+
+    .content-express{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        background-color: #FFFFFF;
+        max-width: 60%;
+        margin: 2em 20em;
+        padding: 2em;
+        border-radius: 10px;
+        border: solid 1px;
+    }
+
+    .textos2{
+        margin-left: 1.2em;
+    }
+    
+    .express-info{
+        display: flex;
+        flex-direction: column  ;
+        max-width: 40%;
+        margin-right: 6em;
+        margin-left: 2em;
+        margin-top: 1em ;
+    }
+
+
+    .express-country{
+        display: flex;
+        flex-direction: column;
+        max-width: 50%;
+        margin-top: 1em;
+    }
+
+
+
+    .mapa{
+        width: 4em;
+    }
+
+    .Span{
+        padding: 1em;
+        position: absolute;
+        padding-right: 1.2em;
+        left: 23em;
+        margin-top: -.5em;
+        float: left;
+        border-radius: 10%;
+        width: 10px;
+        background-color: #e07108;
+        
+    }
+
+    span{
+        font-size: 25px;
+        font-family: 'Aldrich';
+        font-weight: bold;
+    }
+
+    .rodapezin{
+        margin-top: 13em;
+    }
+}
+
+
+
+
+

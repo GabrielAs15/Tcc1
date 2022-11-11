@@ -21,6 +21,7 @@ export default function Index() {
     const [nome, setNome] = useState("");
     const [valor, setValor] = useState("");
     const [desconto, setDesconto] = useState(0);
+    const [valorDesc, setValorDesconto] = useState(0);
     const [estoque, setEstoque] = useState(0);
     const [descricao, setDescricao] = useState("");
     const [imagem, setImagem] = useState();
@@ -43,6 +44,7 @@ export default function Index() {
         setNome(resposta.info.nome);
         setValor(resposta.info.valor);
         setDesconto(resposta.info.desconto);
+        setValorDesconto(resposta.info.valorDesc);
         setEstoque(resposta.info.estoque);
         setDescricao(resposta.info.descricao);
         setIdDepartamento(resposta.info.departamento);
@@ -70,8 +72,10 @@ export default function Index() {
             else{
                 await alterarProduto(id, idDepartamento, marca, nome, valor, desconto, estoque, descricao);
                 await enviarImagemProduto(id, imagem);
-            alert('Produto alterado com sucesso')
+                alert('Produto alterado com sucesso');
             }
+
+            
 
         } catch(err) {
             alert(err.response.data.erro);

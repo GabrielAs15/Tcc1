@@ -1,6 +1,7 @@
 import './index.scss'
 import {useRef } from 'react';
 import Produto from '../../components/boxProduto'
+import Marca from '../../components/img-M'
 
 
 export default function Index(){
@@ -23,7 +24,53 @@ export default function Index(){
                         <img className='img-B' src='images/left.png' alt='Scroll Left'/>
                     </button>
                 <div className='carrossel' ref={carrossel}>   
-            
+                <div className='marca'>
+                        <Marca/>
+                    </div>
+                    <div className='marca'>
+                        <Marca/>
+                    </div>
+                    <div className='marca'>
+                        <Marca/>
+                    </div>
+                    <div className='marca'>
+                        <Marca/>
+                    </div>
+                    <div className='marca'>
+                        <Marca/>
+                    </div>
+
+                    <div className='marca'>
+                        <Marca/>
+                    </div>
+                    <div className='marca'>
+                        <Marca/>
+                    </div>
+                    <div className='marca'>
+                        <Marca/>
+                    </div>
+                    <div className='marca'>
+                        <Marca/>
+                    </div>
+                    <div className='marca'>
+                        <Marca/>
+                    </div>
+                    <div className='marca'>
+                        <Marca/>
+                    </div>
+                    <div className='marca'>
+                        <Marca/>
+                    </div>
+                    <div className='marca'>
+                        <Marca/>
+                    </div>
+                    <div className='marca'>
+                        <Marca/>
+                    </div>
+                    <div className='marca'>
+                        <Marca/>
+                    </div>
+
                 </div>
                     <button className='botao' onClick={rightClick}>
                         <img  className='img-B' src='images/right.png' alt='Scroll Right'/>
