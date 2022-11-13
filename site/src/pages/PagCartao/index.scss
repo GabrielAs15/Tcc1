@@ -1,0 +1,97 @@
+.payment-page{
+
+    background-color: #F0F0F0;
+
+    min-height: 93vh;
+    
+
+    .box-grandao{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    h1{
+        text-align: center;
+        font-family: 'Aldrich';
+    }
+
+    .box-pagamento-cartão{
+        background-color: #ffffff;
+        max-width: 20em;
+        padding: 3em 10em;
+        margin-top: 2em;
+        border-radius: .2em;
+        box-shadow: 2px 2.5px 3px 2px #00000026;
+    }
+
+    input{
+        border-radius: .5em;
+        border-color: #998a8a;
+        margin: .3em;
+        font-family: 'Inter';
+    }
+
+    .NMC{
+        width: 25em;
+        margin-left: -3em;
+        margin-bottom: 1em;
+    }
+
+    .info-card{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .info-content{
+        width: 8em;
+        padding-right: 3em;
+        margin-right: 7.7em;
+        margin-left: -2.9em;
+        margin-bottom: 1em;
+
+    }
+
+    .info-content2{
+        width: 5em;
+        text-align: center;
+    }
+
+    .info-content3{
+        width: 25em;
+        margin-left: -3em;
+    }
+
+    .opção-pagamento{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-top: 1em;
+    }
+
+    .pix{
+        width: 140px;
+        margin-bottom: .9em;
+    }
+
+    .cartao{
+        width: 90px;
+    }
+
+    .botão{
+        background-color: #2B981A;
+        padding: 1em 2em;
+        border-radius: 1.5em;
+        color: #FFFFFF;
+        font-family: 'Inter';
+        font-weight: 500;
+        font-size: 1em;
+    }
+
+    .botao{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 1.3em;
+        
+    }
+}

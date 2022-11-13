@@ -10,10 +10,11 @@ export default function Index(){
             
             <div className='content-express'>
                 
-                <div className='express-info'>
-                    <div className='Span'>
+                <div className='Span'>
                         <span> J </span>
                     </div>
+                <div className='express-info'>
+                    
                     <div> Rua dos Bobos n°0 </div>
                     <div className='textos2'> Liberdade </div>
 
@@ -25,7 +26,7 @@ export default function Index(){
                 
             </div>
             <div className='rodapezin'> 
-            <Rodape />
+                <Rodape />
             </div>
             
         </main>

@@ -45,11 +45,9 @@
 
     .Span{
         padding: 1em;
-        position: absolute;
         padding-right: 1.2em;
-        left: 23em;
         margin-top: -.5em;
-        float: left;
+        
         border-radius: 10%;
         width: 10px;
         background-color: #e07108;
@@ -60,6 +58,7 @@
         font-size: 25px;
         font-family: 'Aldrich';
         font-weight: bold;
+        float: left
     }
 
     .rodapezin{
