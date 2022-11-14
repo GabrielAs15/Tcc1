@@ -4,7 +4,7 @@ import './cadastroUsuario.scss';
 import { Link, useNavigate } from 'react-router-dom'
 
 // API
-import { cadastroUsuario } from '../../api/cadastrousuarioAPI.js';
+import { cadastroUsuario } from '../../api/usuario/cadastrousuarioAPI.js';
 import { useState } from 'react';
 
 // Toastify

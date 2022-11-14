@@ -5,7 +5,7 @@ const api = axios.create({
 })
 
 export async function cadastroProduto(idDepartamento, marca, nome, valor, desconto, estoque, descricao){
-    const r = await api.post('/cadastrarProduto', {
+    const r = await api.post('/admin/cadastrarProduto', {
         idDepartamento: idDepartamento,
         marca: marca,
         nome: nome,
@@ -21,7 +21,7 @@ export async function cadastroProduto(idDepartamento, marca, nome, valor, descon
 export async function enviarImagemProduto(id, imagem){
     const formData = new FormData();    
     formData.append('foto', imagem)
-    const resposta = await api.put(`/cadastrarProduto/${id}/imagem`, formData, {
+    const resposta = await api.put(`/admin/cadastrarProduto/${id}/imagem`, formData, {
         headers:{
             "Content-Type": "multipart/form-data"
         },
@@ -30,7 +30,7 @@ export async function enviarImagemProduto(id, imagem){
 }
 
 export async function alterarProduto(id, idDepartamento, marca, nome, valor, desconto, estoque, descricao){
-    const r = await api.put(`/produto/${id}`, {
+    const r = await api.put(`/admin/produto/${id}`, {
         idDepartamento: idDepartamento,
         marca: marca,
         nome: nome,

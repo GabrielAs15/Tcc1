@@ -1,4 +1,4 @@
-import {alterarProduto, BuscaporId, buscaPorNome, inserirProduto, mudarImagem, procurarTodosProdutos, removerProduto, showImage, BuscarImagens} from '../repository/produtorepository.js'
+import {alterarProduto, BuscaporId, buscaPorNome, inserirProduto, mudarImagem, procurarTodosProdutos, removerProduto, showImage, BuscarImagens} from '../../repository/admin/produtorepository.js'
 
 import multer from 'multer'
 import { Router } from 'express'
@@ -7,7 +7,7 @@ const server = Router();
 const upload = multer({ dest: 'storage/imgProduto' })
 
 
-server.post('/cadastrarProduto', async (req, resp)=>{
+server.post('/admin/cadastrarProduto', async (req, resp)=>{
     try{
         const novoProduto = req.body;
 
@@ -37,7 +37,7 @@ server.post('/cadastrarProduto', async (req, resp)=>{
      }
 })
 
-server.put('/cadastrarProduto/:id/imagem', upload.single('foto') , async (req, resp)=>{
+server.put('/admin/cadastrarProduto/:id/imagem', upload.single('foto') , async (req, resp)=>{
     try{
         const {id} = req.params;
         const imagem = req.file.path;
@@ -55,7 +55,7 @@ server.put('/cadastrarProduto/:id/imagem', upload.single('foto') , async (req, r
 })
 
 
-server.get('/produto/', async (req,resp) =>{
+server.get('/admin/produto/', async (req,resp) =>{
     try{
         const resposta = await procurarTodosProdutos();
         resp.send(resposta)
@@ -71,7 +71,7 @@ server.get('/produto/', async (req,resp) =>{
 
 
 
-server.get('/produto/busca', async (req, resp) => {
+server.get('/admin/produto/busca', async (req, resp) => {
     try {
         const { nome } = req.query;
         const resposta = await buscaPorNome([nome]);
@@ -84,7 +84,7 @@ server.get('/produto/busca', async (req, resp) => {
     }
 })
 
-server.delete('/produto/:id', async (req, resp) => {
+server.delete('/admin/produto/:id', async (req, resp) => {
     try {
         const {id}  = req.params;
         
@@ -100,7 +100,7 @@ server.delete('/produto/:id', async (req, resp) => {
 })
 
 
-server.put('/produto/:id', async (req, resp) => {
+server.put('/admin/produto/:id', async (req, resp) => {
     try {
         const { id } = req.params;
         const produto = req.body;
@@ -133,7 +133,7 @@ server.put('/produto/:id', async (req, resp) => {
     }
 })
 
-server.get('/produto/:id', async (req, resp) => {
+server.get('/admin/produto/:id', async (req, resp) => {
     try {
         const id = req.params.id;
 

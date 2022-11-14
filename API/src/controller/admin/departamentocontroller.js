@@ -1,4 +1,4 @@
-import { listarDepartamentos } from "../repository/departamentoRepository.js";
+import { listarDepartamentos } from "../../repository/admin/departamentorepository.js";
 
 
 import { Router } from "express";

@@ -8,9 +8,23 @@ import Produto from '../../components/boxProduto'
 import Rodape from '../../components/rodapé'
 import Marca from '../../components/img-M'
 import Carrossel from '../../components/carrossel'
-
+import { listarProdutosHome } from '../../api/usuario/produtoAPI';
+import { useState, useEffect } from 'react';
 
 export default function Index(){
+    const [produto, setProduto] = useState();
+
+
+    async function listar(){
+        const r = await listarProdutosHome();
+        setProduto(r);
+    }
+
+    useEffect(() => {
+        listar();
+    }, []);
+
+
 
     return(
         <section className='Page-home'>
@@ -21,23 +35,35 @@ export default function Index(){
                 <div>
                     <p className='promocoes'> PROMOÇÕES </p>
                 </div>
-                <div className=''>
-                    <Carrossel/>
-                </div>
+                
+                {produto.map(item => 
+                        <div className=''>
+                            <Produto item={item} />
+                        </div>
+                    )}
+            
 
                 <div>
                     <p className='promocoes'> MAIS VENDIDOS </p>
                 </div>
-                <div className=''>
-                    <Carrossel/>
-                </div>
+                
+                {produto.map(item => 
+                        <div className=''>
+                        <Produto item={item} />
+                        </div>
+                    )}
+                
 
                 <div>
                     <p className='promocoes'> LANÇAMENTOS </p>
                 </div>
-                <div className=''>
-                    <Carrossel/>
-                </div>
+                
+                {produto.map(item => 
+                        <div className=''>
+                        <Produto item={item} />
+                        </div>
+                    )}
+                
 
                 <div>
                     <p className='promocoes'> MARCAS </p>

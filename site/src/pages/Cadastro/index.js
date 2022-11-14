@@ -5,17 +5,16 @@ import './index.scss';
 import { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 // API
-import { alterarProduto, cadastroProduto } from '../../api/cadastroAPI';
-import { listarMarcas } from '../../api/marcaAPI';
-import { listarDepartamentos } from '../../api/departamentoAPI';
-import { enviarImagemProduto } from '../../api/cadastroAPI';
+import { alterarProduto, cadastroProduto, enviarImagemProduto} from '../../api/admin/cadastroAPI';
+import { listarMarcas } from '../../api/admin/marcaAPI';
+import { listarDepartamentos } from '../../api//admin/departamentoAPI';
+import { BuscaporId } from '../../api/admin/produtoAPI';
+import { API_URL } from '../../api/config';
 
 //Componente
 import Cabecalho from '../../components/cabecalhoADM/index.js'
 import Rodapé from '../../components/rodapé/index.js';
-import { BuscaporId } from '../../api/produtoAPI';
 import { set } from 'local-storage';
-import { API_URL } from '../../api/config';
 
 export default function Index() {
     const [nome, setNome] = useState("");

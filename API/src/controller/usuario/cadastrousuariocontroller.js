@@ -1,4 +1,4 @@
-import { cadastroUsuario } from "../repository/cadastrousuariorepository.js";
+import { cadastroUsuario } from "../../repository/usuario/cadastrousuariorepository.js";
 
 import { Router } from "express";
 const server = Router();

@@ -1,9 +1,25 @@
 import './index.scss'
 import Cabecalho from '../../components/cabecalhoUSUARIO/index.js'
 import Rodape from '../../components/rodapé/index.js'
+import { useParams } from 'react-router-dom'
+import { useEffect, useState } from 'react';
+import { BuscaporId } from '../../api/usuario/produtoAPI';
 
 
 export default function Index(){
+    const [produto, setProduto] = useState({})
+
+
+    const { id } = useParams();
+
+    async function carregarPagina(){
+        const r = await BuscaporId(id);
+        console.log(r);
+    }
+
+    useEffect(() => {
+        carregarPagina();
+    }, [])
 
     return(
         <div className="page-produto">

@@ -9,7 +9,7 @@ import Cabecalho from '../../components/cabecalhoADM/index.js'
 import { Link, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 //API
-import { mostrarTodosProdutos, showImage, buscaPorNome, removerProduto } from '../../api/produtoAPI';
+import { mostrarTodosProdutos, showImage, buscaPorNome, removerProduto } from '../../api/admin/produtoAPI';
 
 //React
 import 'react-confirm-alert/src/react-confirm-alert.css';

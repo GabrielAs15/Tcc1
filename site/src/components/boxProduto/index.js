@@ -1,36 +1,33 @@
 import { useState } from 'react';
 import './index.scss'
+import {API_URL} from '../../api/config'
 
-export default function Consultar(){
-const [pedidoCliente, setPedidoCliente] = useState('');
+export default function Consultar(props) {
 
-    return(
-         <main className='P'>
+    function exibir(imagem){
+        if(!imagem){
+            return './images/x.png'
+        }
+        else {
+            return `${API_URL}/${imagem}`
+        }
+    }
+
+    return (
+        <main className='P'>
             <div className='box-produto'>
-            <div className='box-desconto'>
-                <p>10%</p>
-            </div>
+                <div className='box-desconto'>
+                    <p>10%</p>
+                </div>
 
-            <div className='img-produto'>
-                <img src="../images/placaGTX 38.png"/>
-            </div>
-
-            <div className='info-produto'>
-                {pedidoCliente.map (item => 
-                    <div>
-                        <p className='nome-produto'> {item.nome} </p>
-                        <div className='preco'>
-                        <p className='valor-desconto'> {item.valor}</p>
-                        <p className='valor-final'> {item.desconto} </p>
-                        </div>
+                <div className='info-produto'>
+                    <p className='nome-produto'> {props.item.nm_produto} </p>
+                    <div className='preco'>
+                        <p className='valor-desconto'> R$ {props.item.vl_produto}</p>
+                        <p className='valor-final'> {props.item.vl_desconto} </p>
                     </div>
-                )}
-                
-                
+                </div>
             </div>
-        </div>
-         </main>
-
-
+        </main>
     )
 }

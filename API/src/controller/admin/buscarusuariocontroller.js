@@ -1,4 +1,4 @@
-import { buscarUsuario } from "../repository/buscarusuariorepository.js";
+import { buscarUsuario } from "../../repository/admin/buscarusuariorepository.js";
 import { Router } from 'express'
 
 const server = Router();

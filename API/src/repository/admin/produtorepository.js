@@ -1,4 +1,4 @@
-import {con} from "./connection.js"
+import {con} from "../../connection.js"
 
 export async function inserirProduto(produto){
     const comando =
@@ -134,4 +134,17 @@ export async function BuscarImagens(id){
      const [linhas] = await con.query(comando, [id]);
      return linhas;
 
+}
+
+export async function listarProdutosHome(){
+    const comando = `
+        select  tb_produto.id_produto,
+                nm_produto,
+                vl_produto,
+                vl_desconto,
+                img_produto
+        from    tb_produto
+    `
+    const registro = await con.query(comando);
+    return registro;
 }

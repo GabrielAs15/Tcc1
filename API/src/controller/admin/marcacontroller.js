@@ -1,4 +1,4 @@
-import { listarMarcas } from "../repository/marcarespository.js";
+import { listarMarcas } from "../../repository/admin/marcarespository.js";
 
 
 import { Router } from "express";

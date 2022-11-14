@@ -10,7 +10,7 @@ import { useState, useEffect, useRef  } from 'react';
 import storage from 'local-storage'
 
 // Api
-import { loginUsuario } from '../../api/loginusuarioAPI';
+import { loginUsuario } from '../../api/usuario/loginusuarioAPI';
 
 
 export default function Index(){
