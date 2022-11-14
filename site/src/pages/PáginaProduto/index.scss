@@ -4,24 +4,67 @@
 
     .imagem-produto{
         background-color: #FFFFFF;
-        border-radius: 2em;
-        max-width: 10em;
+        border-radius: .4em;
+        max-width: 12em;
+        padding: 3em;
+        box-shadow: 2px 2.5px 3px 2px #00000026;
     }
     .imagem-produto-capa{
-        width: 10em;
+        width: 12em;
     }
 
     .nome-produto-título{
         background-color: #ffffff;
-        padding: 2em;
-        border-radius: 2em;
+        padding: 3em 4em;
+        border-radius: .5em;
         max-width: 10em;    
+        box-shadow: 2px 2.5px 3px 2px #00000026;
+        font-family: 'Alata';
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .nome-produto{
+        font-size: 15px;
+        font-weight: 100;
+        margin-bottom: 1em;
     }
 
     .botao-produto{
         background-color: #2B981A;
         border-radius: 13px;
-        padding: 1em;
+        padding: 1.5em;
+        width: 11em;
         color:#FFFFFF ;
+        font-family: 'Alata';
+        font-size: .9em;
+        margin-left: -1.3em;
+    }
+
+    .box-produto-page{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 5em 13em;
+    
+    }
+
+    .preco-produto{
+        color: #D80505;
+        margin-bottom: 7px;
+    }
+    
+    .desconto-produto{
+        margin-bottom: 1.5em;
+    }
+    
+    .descricao-produto{
+        background-color: #FFFFFF;
+        border-radius: .5em;
+        padding: 1em;
+        max-width: 70%;
+        margin-left: 12em;
+        margin-bottom: 5em;
     }
 }
