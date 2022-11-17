@@ -12,8 +12,7 @@ import { listarProdutosHome } from '../../api/usuario/produtoAPI';
 import { useState, useEffect } from 'react';
 
 export default function Index(){
-    const [produto, setProduto] = useState();
-
+    const [produto, setProduto] = useState([]);
 
     async function listar(){
         const r = await listarProdutosHome();
@@ -62,7 +61,7 @@ export default function Index(){
                         <div className=''>
                         <Produto item={item} />
                         </div>
-                    )}
+                )}
                 
 
                 <div>
