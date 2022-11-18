@@ -6,7 +6,9 @@ import Rodapé from '../../components/rodapé';
 export default function index(){
     return(
     <main className='page-total'>
-            <Cabecalho />   
+        <div className='cabecalho-sobre-nos'>
+            <Cabecalho />
+        </div>   
         <div>
             <h1> Sobre Nós </h1>
         </div>
@@ -35,7 +37,9 @@ export default function index(){
                 </div>
             </div>
         </div>
+    <div className='rodape-sobre-nos'>
         <Rodapé />
+    </div>
     </main>    
     )
 }

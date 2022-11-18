@@ -1,10 +1,12 @@
-.P{
-
+.p{
+    display: flex;
+    flex-direction: row;
 
     .box-produto{
         border: 1px solid;
         width: min-content;
         padding: 1vh;
+        
 
     }
 
@@ -30,4 +32,9 @@
     .preco{
         font-family: 'alata';
     }
+
+    .imagens-landing{
+        width: 10em;
+    }
+
 }

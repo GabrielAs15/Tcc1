@@ -4,7 +4,35 @@ import './carinho.scss'
 import Cabecalho from '../../components/cabecalhoUSUARIO';
 import Produto from '../../components/carrinhoProduto';
 import Rodape from '../../components/rodapé';
+import { useEffect, useState } from 'react';
+import Storage from 'local-storage'
+import { BuscaporId } from '../../api/usuario/produtoAPI';
 export default function Index(){
+const [itens, setItens] = useState([]);
+
+    async function mostrarCarrinho(){
+        let carrinho = Storage('carrinho');
+        if(carrinho){
+            
+            let temp = [];
+
+            for(let produto of carrinho){
+                let p = await BuscaporId(produto.id);
+                temp.push({
+                    produto: p,
+                    qtd: produto.qtd
+                })
+            }   
+            setItens(temp)
+        }
+        
+    }
+
+    useEffect(() => {
+        mostrarCarrinho();
+    }, [])
+
+
 
     return(
             <main className='pag-carrinhototal'>
@@ -12,11 +40,15 @@ export default function Index(){
                 <div className='div-total-carrinho'>
                     <div className='subdiv-total-carrinho'>
                         <div className='pdt-carrinho'>
-                            <Produto />
+                           {itens.map(item =>
+                             <Produto item={item}/>
+                            )}
                         </div>
                         <div className='pdt-carrinho'>
-                            <Produto />
-                        </div>
+                        {itens.map(item =>
+                             <Produto item={item}/>
+                            )}                       
+                             </div>
                     </div>
                     <div className='div-carrinho'>
                         <div className='subdiv-carrinho'>

@@ -43,7 +43,6 @@ export default function Index() {
         setNome(resposta.info.nome);
         setValor(resposta.info.valor);
         setDesconto(resposta.info.desconto);
-        setValorDesconto(resposta.info.valorDesc);
         setEstoque(resposta.info.estoque);
         setDescricao(resposta.info.descricao);
         setIdDepartamento(resposta.info.departamento);

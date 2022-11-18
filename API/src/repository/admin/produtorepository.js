@@ -116,10 +116,12 @@ export async function BuscaporId(id){
                 vl_desconto     as  desconto,
                 qtd_estoque     as  estoque,
                 ds_produto      as  descricao,
-                id_departamento as  departamento,
+                nm_departamento as departamento,
                 id_marca        as  marca
-      from      tb_produto     
-     WHERE      id_produto = ? `
+	 from      tb_produto    
+     inner join tb_departamento on tb_departamento.nm_departamento = tb_departamento.nm_departamento
+    WHERE      id_produto = ?
+     `
     
        const [linhas] = await con.query(comando, [id]);
        return linhas[0];
@@ -127,7 +129,7 @@ export async function BuscaporId(id){
 
 export async function BuscarImagens(id){
     const comando = `
-    SELECT  img_produto
+    SELECT  img_produto as imagem
       FROM  tb_produto
      WHERE  id_produto = ?`
 
@@ -139,12 +141,12 @@ export async function BuscarImagens(id){
 export async function listarProdutosHome(){
     const comando = `
         select  tb_produto.id_produto,
-                nm_produto,
-                vl_produto,
-                vl_desconto,
-                img_produto
+                nm_produto        as  nome,
+                vl_produto        as  valor,
+                vl_desconto       as  desconto,
+                img_produto       as  imagem
         from    tb_produto
     `
-    const registro = await con.query(comando);
+    const [registro] = await con.query(comando);
     return registro;
 }

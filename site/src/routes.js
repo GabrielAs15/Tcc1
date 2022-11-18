@@ -42,7 +42,6 @@ import RedefinirSenha from './pages/RedefinirSenha/index.js'
 
 import Home from './pages/PaginaInicial/index.js'
 
-
 export default function AppRoutes() {
     return(
         <BrowserRouter>
@@ -56,7 +55,7 @@ export default function AppRoutes() {
                 <Route path='/BuscarProduto' element={<BuscarProduto />} />
                 <Route path='/LoginUsuario' element={<LoginUsuario />} />
                 <Route path='/Test' element={<Test/>} />
-                <Route path='/PaginaProduto' element={<PaginaProduto/>} />
+                <Route path='/PaginaProduto/:id/detalhe' element={<PaginaProduto/>} />
                 <Route path='/MeusDados' element={<MeusDados/>}/>
                 <Route path='/MeusPedidos' element={<MeusPedidos/>}/>
                 <Route path="/Enderecos" element={<Enderecos/>}/>
@@ -70,6 +69,7 @@ export default function AppRoutes() {
                 <Route path="/PedidosAbertos" element={<PedidosAbertos/>} />
                 <Route path="/StatusPedido" element={<StatusPedido/>} />
                 <Route path="/RedefinirSenha" element={<RedefinirSenha/>} />
+
             </Routes>
         </BrowserRouter>
     );  

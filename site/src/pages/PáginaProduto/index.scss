@@ -12,7 +12,9 @@
     .imagem-produto-capa{
         width: 12em;
     }
-
+    .imagem-produto-imagem{
+        width: 100%;
+    }
     .nome-produto-título{
         background-color: #ffffff;
         padding: 3em 4em;
@@ -26,7 +28,7 @@
     }
 
     .nome-produto{
-        font-size: 15px;
+        font-size: 25px;
         font-weight: 100;
         margin-bottom: 1em;
     }
@@ -66,5 +68,10 @@
         max-width: 70%;
         margin-left: 12em;
         margin-bottom: 5em;
+    }
+
+    .desconto-preco-produto{
+        display: flex;
+        flex-direction: row;
     }
 }

@@ -1,11 +1,11 @@
 import './index.scss'
-import {useRef } from 'react';
+import {useRef, useState, useEffect } from 'react';
 import Produto from '../../components/boxProduto'
-import Marca from '../../components/img-M'
+import { listarProdutosHome } from '../../api/usuario/produtoAPI';
 
 
 export default function Index(){
-
+const [produto, setProduto] = useState([])
     const carrossel = useRef(null);
 
     const leftClick=(e)=>{
@@ -18,6 +18,15 @@ export default function Index(){
 
     }
 
+    async function listar(){
+        const r = await listarProdutosHome();
+        setProduto(r);
+    }
+
+    useEffect(() => {
+        listar();
+    }, []);
+
     return(
         <div className='cont-P'>
                     <button className='botao' onClick={leftClick}>
@@ -25,50 +34,11 @@ export default function Index(){
                     </button>
                 <div className='carrossel' ref={carrossel}>   
                 <div className='marca'>
-                        <Marca/>
-                    </div>
-                    <div className='marca'>
-                        <Marca/>
-                    </div>
-                    <div className='marca'>
-                        <Marca/>
-                    </div>
-                    <div className='marca'>
-                        <Marca/>
-                    </div>
-                    <div className='marca'>
-                        <Marca/>
-                    </div>
-
-                    <div className='marca'>
-                        <Marca/>
-                    </div>
-                    <div className='marca'>
-                        <Marca/>
-                    </div>
-                    <div className='marca'>
-                        <Marca/>
-                    </div>
-                    <div className='marca'>
-                        <Marca/>
-                    </div>
-                    <div className='marca'>
-                        <Marca/>
-                    </div>
-                    <div className='marca'>
-                        <Marca/>
-                    </div>
-                    <div className='marca'>
-                        <Marca/>
-                    </div>
-                    <div className='marca'>
-                        <Marca/>
-                    </div>
-                    <div className='marca'>
-                        <Marca/>
-                    </div>
-                    <div className='marca'>
-                        <Marca/>
+                    {produto.map(item => 
+                        <div className=''>
+                            <Produto item={item} />
+                        </div>
+                    )}
                     </div>
 
                 </div>

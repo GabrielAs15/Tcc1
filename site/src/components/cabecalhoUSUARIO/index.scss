@@ -28,12 +28,14 @@
         width: 3em;
         margin-top: 1.5em;
         margin-left: 11em;
+        cursor: pointer;
     }
 
     .faq, .carrinho{
         width: 2em;
         height: 2em;
-        margin-top: 25px;
+        margin-top: 2.3em;
+        margin-right: 1em;
     }
 
     .t1{
@@ -45,7 +47,7 @@
 
     .t2 {
         font-family: 'Aldrich';
-        margin-top: 2em;
+        margin-top: 2.7em;
     }
     .logo{
         width: 10em;
@@ -65,7 +67,7 @@
         line-height: 2em;
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;   
+        justify-content: space-evenly;
         
     }
 
@@ -88,14 +90,16 @@
         font-family: 'Aldrich';
         font-size: 1.5em;
         margin-bottom: 2em;
+        cursor: pointer;
     }
 
     .t3{        
-        margin-left: -.8em;
+        margin-left: 2em;
         margin-right: -1em;
         text-align: center;
         margin-top: 33em;
-
+        background-color: transparent;
+        width: 2em;
     }
 
     .lines{
@@ -176,5 +180,9 @@
     input{
         border: none;
 
+    }
+
+    .link{
+        background-color: transparent;
     }
 }

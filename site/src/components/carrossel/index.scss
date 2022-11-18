@@ -16,3 +16,8 @@
 .carrossel::-webkit-scrollbar{
     display:none;
 }
+
+.marca{
+    display: flex;
+        flex-direction: row;
+}

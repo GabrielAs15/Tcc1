@@ -14,20 +14,15 @@ import { useState, useEffect } from 'react';
 export default function Index(){
     const [produto, setProduto] = useState([]);
 
-    async function listar(){
-        const r = await listarProdutosHome();
-        setProduto(r);
-    }
+    
 
-    useEffect(() => {
-        listar();
-    }, []);
-
-
+    console.log(produto);
 
     return(
         <section className='Page-home'>
-            <Cabecalho />
+            <div className='cabecalho-home'>
+                <Cabecalho />
+            </div>
                 <div className='section-home'>
                     <p> BEM-VINDO <br/> A <br/> TECH EXPRESS</p>
                 </div>
@@ -35,34 +30,19 @@ export default function Index(){
                     <p className='promocoes'> PROMOÇÕES </p>
                 </div>
                 
-                {produto.map(item => 
-                        <div className=''>
-                            <Produto item={item} />
-                        </div>
-                    )}
-            
+                <Carrossel />           
 
                 <div>
                     <p className='promocoes'> MAIS VENDIDOS </p>
                 </div>
                 
-                {produto.map(item => 
-                        <div className=''>
-                        <Produto item={item} />
-                        </div>
-                    )}
-                
+                <Carrossel />               
 
                 <div>
                     <p className='promocoes'> LANÇAMENTOS </p>
                 </div>
                 
-                {produto.map(item => 
-                        <div className=''>
-                        <Produto item={item} />
-                        </div>
-                )}
-                
+                <Carrossel />
 
                 <div>
                     <p className='promocoes'> MARCAS </p>

@@ -77,10 +77,18 @@ export default function Index() {
         if (consoles === true)
             setConsoles(false)
     }
+
+    function LinkConta(){
+        navigate('/MinhaConta')
+    }
+
+    function LinkLogin(){
+        navigate('/Login')
+    }
     return (
         <header className="cabecalho-pagin" >
 
-            <img src="./images/menu.png" className="menu" onClick={MostrarMenu} />
+            <img src="/images/menu.png" className="menu" onClick={MostrarMenu} />
 
 
             {menu === true &&
@@ -94,8 +102,7 @@ export default function Index() {
 
                             <div className='lines'>
                                 <div className='linha1'>
-                                    <img src='' />
-                                    <a> Meu Perfil</a>
+                                    <p className='link' onClick={LinkConta}> Meu Perfil</p>
                                 </div>
                                 <div className='perifericos' onClick={ToggleMode}>
                                     <div className='linha2'> periféricos </div>
@@ -148,18 +155,19 @@ export default function Index() {
 
             }
             <Link to="/">
-                <img src="./images/logoT 3.png" className='logo' />
+                <img src="/images/logoT 3.png" className='logo' />
             </Link>
             <div className='t1'>
                 <input type='text' />
-                <img className="lupa" src='./images/lupa.png' style={{ width: 40 }} />
+                <img className="lupa" src='/images/lupa.png' style={{ width: 40 }} />
             </div>
-            <div className='t2'> Entrar </div>
+            <div className='t2' onClick={LinkLogin}> Entrar </div>
             <Link to="/SobreNos">
-                <img src="./images/image 16.png" alt="faq" className='faq' />
+                <img src="/images/image 16.png" alt="faq" className='faq' />
             </Link>
-            <img src="./images/image 15.png" alt="carrinho" className='carrinho' />
-
+            <Link to="/Carrinho">
+                <img src="/images/image 15.png" alt="carrinho" className='carrinho' />
+            </Link>
         </header>
 
     );

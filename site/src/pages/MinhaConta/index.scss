@@ -1,31 +1,99 @@
-.pagina{
-    min-height: 103vh;
-    background-color: #f0f0f0;
+.page-conta-cliente {
+    min-height: 100vh;
+    background-color: #F0F0F0;
+    
+    .black {
+        color: white;
+        background-color: black;
+        padding: 0.3em 3em;
+        font-size: 20px;
 
-    .barra{
+    }
+
+    .text-conta-cliente {
+        padding: 0.3em 3em;
+        font-size: 20px;
+
+    }
+
+    p {
+        background-color: white;
+        font-family: Aldrich;
+    }
+
+    .Cont-conta-cliente {
+        display: flex;
+        justify-content: center;
+    
+        flex-direction: row;
+        padding-bottom: 6em;
+    }
+
+    .barra-pages{
+     cursor: pointer;
+     display: flex;
+     flex-direction: row;
+    }
+
+    .Dados-card-cliente{
+        background-color: #FFFFFF;
+        padding: 2em;
+        border-radius: 1em;
+        max-width: 10em;
+        margin-left: 2em;
+        font-size: 1em;
+        font-family: 'Inter';
+        line-height: 1.6em;
+        padding-right: 3em;
+    }
+
+    .titulo-card{
+        font-weight: bold;
+        font-family: 'Aldrich';
+        font-size: 1.2em;
+        margin-bottom: .4em;
+    }
+
+    .button-alterar{
+        border-radius: 1em;
+        margin-left: 3.7em;
+        background-color: #FFE5D1;
+        width: 4em;
+        height: 2em;
+        margin-top: 1em;
+        border: 2px solid #EF6B0C;
+    }
+
+    .cards-cliente-infor{
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-        line-height: 3em;
-        border: solid #000;
     }
-    .barrinha{
+
+    .barra-e-card{
         display: flex;
         flex-direction: column;
-        background-color: #000;
-        color: #000;
-    }
-    .cards{
-        display: flex;
-        flex-direction: row;
         justify-content: center;
     }
-    .card{
-        background-color: #ffffff;
-        max-width: 15em;
-        margin: 1em;
-        padding: 1em;
-        box-shadow: 1px 1px 1px gray;
-        border-radius: 15px;
+
+    .Dados-card-cliente-baixo{
+        background-color: #FFFFFF;
+        padding: 2em;
+        border-radius: 1em;
+        max-width: 10em;
+        margin-left: 34em;
+        font-size: 1em;
+        font-family: 'Inter';
+        line-height: 1.6em;
+        padding-right: 3em;
+        margin-bottom: 5em;
+    }
+
+    .cabecalho-comp{
+        width: 95.9%;
+    }
+
+    .rodape-comp{
+        width: 96%;
     }
 }

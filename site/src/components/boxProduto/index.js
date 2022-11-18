@@ -1,30 +1,38 @@
 import { useState } from 'react';
 import './index.scss'
 import {API_URL} from '../../api/config'
+import { useNavigate } from 'react-router-dom';
 
 export default function Consultar(props) {
 
+    const navigate = useNavigate();
+    
+    
     function exibir(imagem){
         if(!imagem){
             return './images/x.png'
         }
         else {
-            return `${API_URL}/${imagem}`
+            return (`${API_URL}/${imagem}`)
         }
     }
 
-    return (
-        <main className='P'>
-            <div className='box-produto'>
-                <div className='box-desconto'>
-                    <p>10%</p>
-                </div>
+    function abrirDetalhes(id) {
+        navigate('/PaginaProduto/' + id + '/detalhe')
+    }
 
+
+    return (
+        <main className='p' onClick={() => abrirDetalhes(props.item.id_produto)}>
+            
+            <div className='box-produto'>
+            <p className='box-desconto'> {props.item.desconto}%</p>
+
+                <img src={exibir(props.item.imagem)} alt="" className='imagens-landing'/> 
                 <div className='info-produto'>
-                    <p className='nome-produto'> {props.item.nm_produto} </p>
+                    <p className='nome-produto'> {props.item.nome} </p>
                     <div className='preco'>
-                        <p className='valor-desconto'> R$ {props.item.vl_produto}</p>
-                        <p className='valor-final'> {props.item.vl_desconto} </p>
+                        <p className='valor-final'> {props.item.valor} </p>
                     </div>
                 </div>
             </div>
