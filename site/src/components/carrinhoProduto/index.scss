@@ -75,4 +75,20 @@
         border: none;
         margin-bottom: 10px;
     }
+
+    .subtotal-produto{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        font-size: 16px;
+        font-family: 'Alata';
+    }
+
+    .título-subtotal-produto{
+        margin-top: -1em;
+    }
+
+    .valor-subtotal-produto{
+        font-family: 'Alata';
+    }
 }

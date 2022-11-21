@@ -15,6 +15,9 @@ import loginUsuarioController from './controller/usuario/loginusuariocontroller.
 
 import produtoController from './controller/usuario/produtocontroller.js'
 
+import enderecoCController from './controller/usuario/enderecocontroller.js'
+
+import pedidoController from './controller/usuario/pedidocontroller.js'
 const server = express();
 server.use(cors());
 server.use(express.json());
@@ -29,6 +32,8 @@ server.use(cadastrousuarioController);
 server.use(loginUsuarioController);
 server.use(buscarUsuarioController);
 server.use(produtoController);
+server.use(enderecoCController);
+server.use(pedidoController);
 
 
 server.listen(process.env.PORT, () => console.log(`API online na porta ${process.env.PORT}`));

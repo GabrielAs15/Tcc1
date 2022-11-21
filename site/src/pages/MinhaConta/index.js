@@ -1,8 +1,24 @@
 import './index.scss'
 import Cabecalho from '../../components/cabecalhoUSUARIO/index.js'
 import Rodape from '../../components/rodapé/index.js'
+import { useNavigate } from 'react-router-dom'
 export default function Index() {
 
+    const navigate = useNavigate();
+   function irMeusPedidos(){
+    navigate('/MeusPedidos')
+   }
+
+   function irMeusDados(){
+    navigate('/MeusDados')
+   }
+   function irMinhaConta(){
+    navigate('/MinhaConta')
+   }
+   function irEnderecos(){
+       navigate('Endereços')
+   }
+    
     return (
         <div className='page-conta-cliente'>
             <div className='cabecalho-comp'>
@@ -11,10 +27,9 @@ export default function Index() {
             <div className='barra-e-card'>
                 <div className='Cont-conta-cliente'>
                     <div className='barra-pages'>
-                        <p className='black'> Minha Conta</p>
-                        <p className='text-conta-cliente'> Meus dados</p>
-                        <p className='text-conta-cliente'> Meus pedidos</p>
-                        <p className='text-conta-cliente'> Endereços</p>
+                        <p className='black' onClick={irMinhaConta}> Minha Conta</p>
+                        <p className='text-conta-cliente' onClick={irMeusDados}> Meus dados</p>
+                        <p className='text-conta-cliente' onClick={irMeusPedidos}> Meus pedidos</p>
                     </div>
                 </div>
                 <div className='cards-cliente-infor'>

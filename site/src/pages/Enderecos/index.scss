@@ -43,4 +43,25 @@
     .mapa{
         width: 4em;
     }
+
+    .barra-pages{
+        cursor: pointer;
+        display: flex;
+        flex-direction: row;
+       }
+   
+
+    .text-conta-cliente {
+        padding: 0.3em 3em;
+        font-size: 20px;
+
+    }
+    .black {
+        color: white;
+        background-color: black;
+        padding:0.3em 3em;
+        font-size:20px;
+
+    }
+
 }

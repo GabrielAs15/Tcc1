@@ -1,10 +1,11 @@
 import './index.scss';
 import { API_URL } from '../../api/config.js'
-import { useEffect } from 'react';
+import { useState } from 'react';
+import Storage from 'local-storage'
 
-
-export default function CarrinhoProduto({ item: { produto: { info, imagem}, qtd} } ) {
-    
+export default function CarrinhoProduto({ item: { produto: { info, imagem}, qtd}, removerItem, mostrarCarrinho } ) {
+//const [subtotal, setSubtotal] = useState('-');
+const [qtdProduto, setQtdProduto] = useState(qtd)
 
     function exibirImagem() {
         if (imagem.length >= 0) {
@@ -15,9 +16,28 @@ export default function CarrinhoProduto({ item: { produto: { info, imagem}, qtd}
         }
     }
 
-    useEffect(() =>{
-        console.log(imagem) 
-    }, []);
+
+    function calcularSubtotal(){
+      const subtotal = qtdProduto * ( info.valor);
+      return subtotal;
+
+    }
+
+    function remover(){
+        removerItem(info.id)
+    }
+
+    function alterarQuantidade(novaQtd){
+        setQtdProduto(novaQtd);
+        let carrinho = Storage('carrinho');
+        let itemStorage = carrinho.find(item => item.id == info.id);
+        itemStorage.qtd = novaQtd;
+        
+        Storage('carrinho', carrinho);
+        mostrarCarrinho();
+    }
+
+
     return(
         <main className='fundo'>
             <div className='contPrincipal'>
@@ -41,7 +61,7 @@ export default function CarrinhoProduto({ item: { produto: { info, imagem}, qtd}
                     <p className='info-text'> Quantidade</p>
 
                     <div className='contagem'>
-                        <select >
+                        <select value={qtdProduto} onChange={e => alterarQuantidade(e.target.value)}>
                             <option>1</option>
                             <option>2</option>
                             <option>3</option>
@@ -51,8 +71,12 @@ export default function CarrinhoProduto({ item: { produto: { info, imagem}, qtd}
                     </div>
 
                     <div>
-                        <img src='../images/remover2.png' className='remove'/>
+                        <img src='../images/remover2.png' className='remove' onClick={remover}/>
                     </div>
+                </div>
+                <div className='subtotal-produto'>
+                    <div className='título-subtotal-produto'> Subtotal </div>
+                    <div className='valor-subtotal-produto'> R$ {calcularSubtotal()} </div> 
                 </div>
             </div>
         </main>

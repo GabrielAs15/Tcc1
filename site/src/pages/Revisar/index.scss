@@ -1,0 +1,138 @@
+.revisar-page{
+    min-height: 100vh;
+
+    background-color: #F0F0F0;
+
+    font-family: 'Alata';
+
+    .pedido-valor{
+
+        background-color: #FFFFFF;
+        width: 20%;
+        border-radius: 1em;
+        padding: .5em;
+        margin-left: 9em;
+        height: 20em;
+        margin-top: 2em;
+        line-height: 3em;
+    }
+
+    .título-pedido-valor{
+        
+    }
+
+    .add-adress{
+        padding: 10px;
+        border-radius: 5px;
+        background-color: #ffffff;
+        border: 1px solid;
+        cursor: pointer;
+    }
+
+    .enderecos{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .comp-endereco-revisar{
+        
+
+        cursor: pointer;
+    }
+
+    .título-enderecos{
+        font-size: 1.2em;
+        font-weight: 500;
+    }
+
+    .subtítulo-enderecos{
+        font-weight: 100;
+    }
+
+    .box-pagamento-cartão{
+        background-color: #ffffff;
+        max-width: 20em;
+        padding: 3em 10em;
+        margin-top: 2em;
+        border-radius: .2em;
+        box-shadow: 2px 2.5px 3px 2px #00000026;
+    }
+
+    input{
+        border-radius: .5em;
+        border-color: #998a8a;
+        margin: .3em;
+        font-family: 'Inter';
+    }
+
+    .NMC{
+        width: 25em;
+        margin-left: -3em;
+        margin-bottom: 1em;
+    }
+
+    .info-card{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .info-content{
+        width: 8em;
+        padding-right: 3em;
+        margin-right: 7.7em;
+        margin-left: -2.9em;
+        margin-bottom: 1em;
+
+    }
+
+    .info-content2{
+        width: 5em;
+        text-align: center;
+    }
+
+    .info-content3{
+        width: 25em;
+        margin-left: -3em;
+    }
+
+    .opção-pagamento{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-top: 1em;
+    }
+
+    .pix{
+        width: 140px;
+        margin-bottom: .9em;
+    }
+
+    .cartao{
+        width: 90px;
+    }
+
+    .botão{
+        background-color: #2B981A;
+        padding: 1em 2em;
+        border-radius: 1.5em;
+        color: #FFFFFF;
+        font-family: 'Inter';
+        font-weight: 500;
+        font-size: 1em;
+    }
+
+    .botao{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 1.3em;
+        margin-bottom: 2em;
+    }
+
+    .box-pagamento-produto{
+        display: flex;
+        flex-direction: row;
+
+    }
+}

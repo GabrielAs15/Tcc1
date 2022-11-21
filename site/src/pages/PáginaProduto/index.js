@@ -1,15 +1,17 @@
 import './index.scss'
 import Cabecalho from '../../components/cabecalhoUSUARIO/index.js'
 import Rodape from '../../components/rodapé/index.js'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react';
 import { BuscaporId } from '../../api/usuario/produtoAPI';
 import { API_URL } from '../../api/config.js'
 import Storage from 'local-storage';
+import { ToastContainer, toast } from 'react-toastify';
 
 export default function Index(props) {
     const [produto, setProduto] = useState({ info: {}, imagens: [] })
     
+    const navigate = useNavigate();
 
     const { id } = useParams();
 
@@ -33,7 +35,7 @@ export default function Index(props) {
         
     }
 
-
+   
     function adicionarAoCarrinho() {
         let carrinho = [];
         if (Storage('carrinho')) {
@@ -51,12 +53,14 @@ export default function Index(props) {
             Storage('carrinho', carrinho);
         }
 
-        alert('Produto adicionado ao carrinho!');
+        toast.dark('Produto adicionado ao carrinho!');
+        setTimeout(() =>{
+            navigate('/Carrinho');
+        }, 3000)
+        
     }
     
-    /* IMPORTAÇÃO DA IMAGEM 
-         */
-
+    
     useEffect(() => {
         carregarPagina();        
     }, [])
@@ -64,6 +68,7 @@ export default function Index(props) {
     return (
         <div className="page-produto">
             <Cabecalho />
+            <ToastContainer />
             <div className='box-produto-page'>
             <div className="imagem-produto">
                     {produto.imagem && produto.imagem.map((item) =>

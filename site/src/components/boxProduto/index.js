@@ -23,7 +23,7 @@ export default function Consultar(props) {
 
 
     return (
-        <main className='p' onClick={() => abrirDetalhes(props.item.id_produto)}>
+        <main className='p' onClick={() => abrirDetalhes(props.item.id)}>
             
             <div className='box-produto'>
             <p className='box-desconto'> {props.item.desconto}%</p>

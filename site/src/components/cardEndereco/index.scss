@@ -1,0 +1,57 @@
+.content-express{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: #FFFFFF;
+    max-width: 40%;
+    height: 3em;
+    margin: 2em 20em;
+    padding: 2em;
+    border-radius: 10px;
+    border: solid 2px;
+}
+
+.textos2{
+    margin-left: .5em;
+}
+
+.express-info{
+    display: flex;
+    flex-direction: column  ;
+    max-width: 40%;
+    margin-right: 6em;
+    margin-left: 2em;
+   
+}
+
+
+.express-country{
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+  
+}
+
+
+
+.mapa{
+    width: 4em;
+}
+
+.Span{
+    padding: 1em;
+    padding-right: 1.2em;
+    margin-top: -.5em;
+    
+    border-radius: 10%;
+    width: 10px;
+    background-color: #e07108;
+    
+}
+
+span{
+    font-size: 25px;
+    font-family: 'Aldrich';
+    font-weight: bold;
+    float: left
+}

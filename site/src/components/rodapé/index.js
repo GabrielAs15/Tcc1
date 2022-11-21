@@ -46,15 +46,15 @@ export default function Index() {
                 <div> Disponível para:</div>
                 <div className="parcerias">
                     <div className='f1'> 
-                        <img src="./images/playstorelogo.png" />
+                        <img src="/images/playstorelogo.png" />
                     </div>
-                    <img src="./images/appstorelogo.png" />
+                    <img src="/images/appstorelogo.png" />
                 </div>
                 <div className="contatos">
-                    <img src="./images/twitterlogo.png" className='logos'/>                    
-                    <img src="./images/whatslogo.png" className='logos'/>
-                    <img src="./images/instalogo.png" className='logos'/>
-                    <img src="./images/linkedinlogo.png" className='logos'/>
+                    <img src="/images/twitterlogo.png" className='logos'/>                    
+                    <img src="/images/whatslogo.png" className='logos'/>
+                    <img src="/images/instalogo.png" className='logos'/>
+                    <img src="/images/linkedinlogo.png" className='logos'/>
                 </div>
             </div>
         </div>

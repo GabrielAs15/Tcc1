@@ -118,7 +118,7 @@ export async function BuscaporId(id){
                 ds_produto      as  descricao,
                 nm_departamento as departamento,
                 id_marca        as  marca
-	 from      tb_produto    
+	 from       tb_produto    
      inner join tb_departamento on tb_departamento.nm_departamento = tb_departamento.nm_departamento
     WHERE      id_produto = ?
      `
@@ -140,7 +140,7 @@ export async function BuscarImagens(id){
 
 export async function listarProdutosHome(){
     const comando = `
-        select  tb_produto.id_produto,
+        select  tb_produto.id_produto   as id,
                 nm_produto        as  nome,
                 vl_produto        as  valor,
                 vl_desconto       as  desconto,
